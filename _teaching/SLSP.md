@@ -3,7 +3,7 @@ title: "Simulation of Light Scattering and Propagation"
 collection: teaching
 type: "graduate course"
 permalink: /teaching/SLSP
-venue: "NTU EE / NTU GIPO"
+venue: "NTU GIPO"
 date: 2024-09-01
 location: "Taipei, Taiwan"
 ---

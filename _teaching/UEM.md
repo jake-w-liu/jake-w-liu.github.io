@@ -2,8 +2,8 @@
 title: "Undergraduate Electromagnetics"
 collection: teaching
 type: "undergraduate course"
-permalink: /teaching/AEM
-venue: "-"
+permalink: /teaching/UEM
+# venue: "-"
 # date: 2024-09-01
 # location: "Taipei, Taiwan"
 ---

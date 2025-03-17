@@ -3,7 +3,7 @@ title: "Computational Electromagnetics"
 collection: teaching
 type: "graduate course"
 permalink: /teaching/CEM
-venue: "-"
+# venue: "-"
 # date: 2024-09-01
 # location: "Taipei, Taiwan"
 ---

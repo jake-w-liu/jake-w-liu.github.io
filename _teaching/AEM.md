@@ -3,7 +3,7 @@ title: "Advanced Electromagnetics"
 collection: teaching
 type: "graduate course"
 permalink: /teaching/AEM
-venue: "-"
+# venue: "-"
 # date: 2024-09-01
 # location: "Taipei, Taiwan"
 ---
