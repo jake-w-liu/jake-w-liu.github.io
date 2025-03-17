@@ -1,7 +1,7 @@
 ---
 title: "Undergraduate Electromagnetics"
 collection: teaching
-type: "graduate course"
+type: "undergraduate course"
 permalink: /teaching/AEM
 venue: "-"
 # date: 2024-09-01
