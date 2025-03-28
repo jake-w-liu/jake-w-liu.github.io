@@ -17,32 +17,32 @@ Education
 
 Experience
 ======
-* 2022-2024: R&D Engineer
-  * Omplus Technology (Co-Founder)
-  * Rapid antenna array and RFIC calibration algorithm development
-  * Compact antenna test range (CATR) design
-  * Antenna measurement theory
-
 * 2024- : Postdoctoral Researcher
   * Graduate Institute of Photonics and Optoelectronics, National Taiwan University
   * Computational electromagnetics: pseudospectral time-domain (PSTD) method
   * Wave scattering in random media
   * Supervisor: Snow H. Tseng
+* 2022-2024: R&D Engineer
+  * Omplus Technology (Co-Founder)
+  * Rapid antenna array and RFIC calibration algorithm development
+  * Compact antenna test range (CATR) design
+  * Antenna measurement theory
   
 Awards
 ======
-* 2017 The Phi Tau Phi Scholastic Honor Society of the Republic of China 
-  * Honorary Membership
-  * Up to 1% of undergraduate graduands that are excellent in academic performance
-* 2017 Taiwan Creative Electromagnetic Implementation Competition (T-CEIC)
-  * First Prize
-  * Topic: Real-Time Optimization of WiFi RF Signal Distribution in the Coverage of Smart Antenna System via the Cloud Database Computation
-* 2022 National Invention and Creation Award (NICA)
-  * Silver Medal Award
-  * Patent No: I739181
 * 2023 Chun-Hsiung Chen Scholarship for Electromagnetic Talent Cultivation
   * First Prize of Graduate Group
   * Topic: A Calibration Method for A Phased Array Antenna
+* 2022 National Invention and Creation Award (NICA)
+  * Silver Medal Award
+  * Patent No: I739181
+* 2017 Taiwan Creative Electromagnetic Implementation Competition (T-CEIC)
+  * First Prize
+  * Topic: Real-Time Optimization of WiFi RF Signal Distribution in the Coverage of Smart Antenna System via the Cloud Database Computation
+* 2017 The Phi Tau Phi Scholastic Honor Society of the Republic of China 
+  * Honorary Membership
+  * Up to 1% of undergraduate graduands that are excellent in academic performance
+
 
 <!-- Publications
 ======
