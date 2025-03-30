@@ -19,4 +19,4 @@ This course is based on Field and Wave Electromagnetics (2nd ed.) by D. K. Cheng
 * Chapter 5: Plane Waves ([Notes](http://jake-w-liu.github.io/files/uem_ch5_planewave.pdf))
 * Chapter 6: Transmission Lines ([Notes](http://jake-w-liu.github.io/files/uem_ch6_transline.pdf))
 * Chapter 7: Waveguides ([Notes](http://jake-w-liu.github.io/files/uem_ch7_wg&cavity.pdf))
-* Chapter 8: Antennas
+* Chapter 8: Antennas ([Notes](http://jake-w-liu.github.io/files/uem_ch8_antenna.pdf))
