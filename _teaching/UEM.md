@@ -8,8 +8,6 @@ permalink: /teaching/UEM
 # location: "Taipei, Taiwan"
 ---
 
-_PREPARING..._
-
 This course is based on Field and Wave Electromagnetics (2nd ed.) by D. K. Cheng. Below is a series of lecture notes I have prepared. These lecture notes are selective, covering only the most important material from the textbook to help students grasp the essential concepts of electromagnetics from an engieering perspective. I include intermediate steps in derivations to make the notes suitable for self-study.
 
 * Chapter 1: Vector Calculus ([Notes](http://jake-w-liu.github.io/files/uem_ch1_vector.pdf))
