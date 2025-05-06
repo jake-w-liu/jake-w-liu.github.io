@@ -14,7 +14,7 @@ This course is based on Field and Wave Electromagnetics (2nd ed.) by D. K. Cheng
 
 * Chapter 1: Vector Calculus ([Notes](http://jake-w-liu.github.io/files/uem_ch1_vector.pdf))
 * Chapter 2: Electrostatics ([Notes](http://jake-w-liu.github.io/files/uem_ch2_electrostatics.pdf))
-* Chapter 3: Magnetostatics
+* Chapter 3: Magnetostatics ([Notes](http://jake-w-liu.github.io/files/uem_ch3_magnetostatics.pdf))
 * Chapter 4: Maxwell Equations ([Notes](http://jake-w-liu.github.io/files/uem_ch4_maxwell.pdf))
 * Chapter 5: Plane Waves ([Notes](http://jake-w-liu.github.io/files/uem_ch5_planewave.pdf))
 * Chapter 6: Transmission Lines ([Notes](http://jake-w-liu.github.io/files/uem_ch6_transline.pdf))
