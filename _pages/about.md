@@ -2,8 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'><b >Affiliation&nbsp;</b></a>  <b>Department of Electronic Engineering, National Taipei University of Technology</b><br>
-          <a href='#'><b>Position&nbsp;&nbsp;</b></a>  <b>Assistant Professor</b>
+subtitle: <a href='#'><b>Affiliation&nbsp;</b></a>  <b>&nbsp;Department of Electronic Engineering, National Taipei University of Technology</b><br>
+          <a href='#'><b>Position&nbsp;&nbsp;</b></a>  <b>&nbsp;Assistant Professor</b>
 
 profile:
   align: right
