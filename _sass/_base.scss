@@ -738,6 +738,10 @@ footer.sticky-bottom {
           margin-bottom: 0.5rem;
           color: var(--global-card-bg-color) !important;
 
+          &:contains("Journal") {
+            background-color: #F05E1C;
+          }
+
           a {
             color: white;
 
@@ -866,11 +870,6 @@ footer.sticky-bottom {
       border-color: var(--global-highlight-color);
     }
   }
-}
-
-.badge[abbr*="Journal"], 
-.badge:contains("Journal") {
-  background-color: #F05E1C !important; 
 }
 
 // Rouge Color Customization
