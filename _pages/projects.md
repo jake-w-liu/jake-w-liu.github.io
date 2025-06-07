@@ -5,7 +5,7 @@ permalink: /projects/
 description: 
 nav: true
 nav_order: 3
-display_categories: [full courses, talks]
+display_categories: [full courses, short talks]
 horizontal: false
 ---
 

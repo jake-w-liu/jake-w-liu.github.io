@@ -1,7 +1,7 @@
 ---
 layout: page
-title: course 1
-description: with background image
+title: Electromagnetic Theory
+description: graduate course
 img: assets/img/12.jpg
 importance: 1
 category: full courses

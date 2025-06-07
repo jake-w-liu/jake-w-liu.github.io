@@ -1301,7 +1301,8 @@ ninja-keys::part(ninja-input-wrapper) {
 
 // popover is used for annotation in bib.liquid
 .popover {
-  background-color: var(--global-bg-color);
+  // background-color: var(--global-bg-color);
+  background-color: #62c462;
   border-color: var(--global-divider-color);
 
   .popover-header {
