@@ -16,12 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-courses",
-          title: "courses",
+        },{id: "nav-projects",
+          title: "projects",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/courses/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -53,7 +53,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-course-1",
+          title: 'course 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
