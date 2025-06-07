@@ -2,8 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'><b>Affiliation</b></a>  <b>Department of Electronic Engineering, National Taipei University of Technology</b><br>
-          <a href='#'><b>Position</b></a>  <b>Assistant Professor</b>
+subtitle: <a href='#' style="margin-left: 40px;"><b >Affiliation</b></a>  <b>Department of Electronic Engineering, National Taipei University of Technology</b><br>
+          <a href='#' style="margin-left: 40px;"><b>Position</b></a>  <b>Assistant Professor</b>
 
 profile:
   align: right
@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-
+<br>
 Starting August 1, 2025, I will be joining the Department of Electronic Engineering at National Taipei University of Technology (NTUT) as an assistant professor.
 
 Currently engaged in a postdoctoral position specializing in optical simulations, with a focus on the pseudospectral time-domain (PSTD) method. My research leverages numerical methods to explore elelctromagnetic scattering in random media.
