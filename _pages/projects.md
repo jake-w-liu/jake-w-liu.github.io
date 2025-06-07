@@ -1,7 +1,7 @@
 ---
 layout: page
-title: courses
-permalink: /courses/
+title: projects
+permalink: /projects/
 description: 
 nav: true
 nav_order: 3
@@ -9,15 +9,15 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
-<!-- pages/courses.md -->
-<div class="courses">
+<!-- pages/projects.md -->
+<div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized courses -->
+  <!-- Display categorized projects -->
   {% for category in page.display_categories %}
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects = site.courses | where: "category", category %}
+  {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
