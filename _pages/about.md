@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. <h4>Department of Electronic Engineering, National Taipei University</h4>
+subtitle: <a href='#'>Affiliations</a> <h4>Department of Electronic Engineering, National Taipei University</h4>
 
 profile:
   align: right
@@ -26,7 +26,7 @@ latest_posts:
 
 Starting August 1, 2025, I will be joining the Department of Electronic Engineering at National Taipei University of Technology (NTUT) as an assistant professor.
 
-Currently engaged in a postdoctoral position specializing in optical simulations, with a focus on the pseudospectral time-domain (PSTD) method. My research leverages numerical methods to explore light-matter interaction and complex electromagnetic systems.
+Currently engaged in a postdoctoral position specializing in optical simulations, with a focus on the pseudospectral time-domain (PSTD) method. My research leverages numerical methods to explore elelctromagnetic scattering in random media.
 
 My doctoral work focused on developing algorithms for rapid calibration of antenna arrays. My research interests include antenna measurement theory, phased array calibration, computational electromagnetics.
 
