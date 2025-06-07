@@ -1,14 +1,17 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - jake-w-liu
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - jake-w-liu/PlotlySupply.jl
+  - jake-w-liu/PlotlyGeometries.jl
+  - jake-w-liu/VoxelModel.jl
+  - jake-w-liu/RadiationPatterns.jl
+  - jake-w-liu/FishTank.jl
+  - jake-w-liu/BatchAssign.jl
+  - jake-w-liu/MeshGrid.jl
+  - jake-w-liu/VNA-SCPIer
+  - jake-w-liu/SpecialFunctions
+  - jake-w-liu/safe-text
+  - jake-w-liu/game-of-life
