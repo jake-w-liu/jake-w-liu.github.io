@@ -31,6 +31,6 @@ Starting August 1, 2025, I will be joining the Department of Electronic Engineer
 
 Currently engaged in a postdoctoral position specializing in optical simulations, with a focus on the pseudospectral time-domain (PSTD) method. My research leverages numerical methods to explore light-matter interaction and complex electromagnetic systems.
 
-My doctoral work focused on developing algorithms for rapid calibration of antenna arrays. My research interests include antenna measurement theory, phased array calibration, computational electromagnetics, and biomedical optics.
+My doctoral work focused on developing algorithms for rapid calibration of antenna arrays. My research interests include antenna measurement theory, phased array calibration, computational electromagnetics.
 
 In addition, I am a dedicated software developer with a primary focus on Julia programming, creating high-performance solutions for scientific and numerical computing. I am also exploring the JavaScript ecosystem to enhance web-based visualizations and user interaction in research tools.
