@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'><b>Affiliation</b></a>  <b>Department of Electronic Engineering, National Taipei University of Technology</b>
+subtitle: <a href='#'><b>Affiliation</b></a>  <b>Department of Electronic Engineering, National Taipei University of Technology</b><br>
           <a href='#'><b>Position</b></a>  <b>Assistant Professor</b>
 
 profile:
@@ -24,6 +24,7 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
 
 Starting August 1, 2025, I will be joining the Department of Electronic Engineering at National Taipei University of Technology (NTUT) as an assistant professor.
 
