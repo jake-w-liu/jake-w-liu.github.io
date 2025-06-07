@@ -281,6 +281,10 @@ scholar:
   details_dir: bibliography
   details_link: Details
 
+  last_name: [Liu]
+  first_name: [Jake, J. W., Jake W., Jake W]
+  highlight_name: true
+
   query: "@*"
   group_by: year
   group_order: descending
