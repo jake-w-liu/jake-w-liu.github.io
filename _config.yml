@@ -261,8 +261,9 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Liu]
+  first_name: [Jake, J. W., Jake W., Jake W]
+  highlight_name: true
 
   style: apa
   locale: en
@@ -280,10 +281,6 @@ scholar:
 
   details_dir: bibliography
   details_link: Details
-
-  last_name: [Liu]
-  first_name: [Jake, J. W., Jake W., Jake W]
-  highlight_name: true
 
   query: "@*"
   group_by: year
