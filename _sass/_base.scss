@@ -868,6 +868,11 @@ footer.sticky-bottom {
   }
 }
 
+.badge[abbr*="Journal"], 
+.badge:contains("Journal") {
+  background-color: #F05E1C !important; /* Blue for journals */
+}
+
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;
