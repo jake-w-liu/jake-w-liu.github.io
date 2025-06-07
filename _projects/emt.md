@@ -5,7 +5,7 @@ description: graduate course
 img: assets/img/12.jpg
 importance: 1
 category: full courses
-related_publications: true
+related_publications: false
 ---
 
 _PREPARING..._
