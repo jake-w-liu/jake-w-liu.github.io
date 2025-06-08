@@ -29,12 +29,7 @@ I fully understand that this is a demanding course—but don't worry about the g
 
 ## References
 
-No textbook is required for this course, but the following references are highly recommended:
-
-1. Harrington's classic textbook [1] offers a concise yet rigorous treatment of electromagnetic theory. It is strongly recommended, though readers should be mindful of some of its conventions, which may differ from those in other texts.
-2. Balanis’ comprehensive text [2] serves as a practical reference manual. While thorough, it can sometimes feel overwhelming—but it remains a valuable resource.
-3. Barkeshli’s concise volume [3] is also a gem. Portions of the lecture content follow his elegant and clear derivations.
-4. Pathak’s textbook [4], written by my academic "grand-advisor" (my advisor’s advisor), presents more advanced material and complements the foundational coverage of the earlier references.
+No textbook is required for this course, but the following references are highly recommended: (1) Harrington's classic textbook offers a concise yet rigorous treatment of electromagnetic theory. It is strongly recommended, though readers should be mindful of some of its conventions, which may differ from those in other texts. (2) Balanis’ comprehensive text serves as a practical reference manual. While thorough, it can sometimes feel overwhelming—but it remains a valuable resource. (3) Barkeshli’s concise volume is also a gem. Portions of the lecture content follow his elegant and clear derivations. (4) Pathak’s textbook, written by my academic "grand-advisor" (my advisor’s advisor), presents more advanced material and complements the foundational coverage of the earlier references.
 
 
 [1] R. F. Harrington, Time-Harmonic Electromagnetic Fields, McGraw-Hill, 1961.<br>
