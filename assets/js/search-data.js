@@ -58,11 +58,16 @@ ninja.data = [{
           description: "graduate course",
           section: "Projects",handler: () => {
               window.location.href = "/projects/course_emt/";
-            },},{id: "projects-electromagnetic-theory",
-          title: 'Electromagnetic Theory',
-          description: "graduate course",
+            },},{id: "projects-antenna-theory-fundamentals",
+          title: 'Antenna Theory Fundamentals',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/talk_antenna/";
+            },},{id: "projects-introduction-to-pstd",
+          title: 'Introduction to PSTD',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/talk_pstd/";
             },},{
         id: 'social-email',
         title: 'email',
