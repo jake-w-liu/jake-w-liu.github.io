@@ -57,7 +57,12 @@ ninja.data = [{
           title: 'Electromagnetic Theory',
           description: "graduate course",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/emt/";
+              window.location.href = "/projects/course_emt/";
+            },},{id: "projects-electromagnetic-theory",
+          title: 'Electromagnetic Theory',
+          description: "graduate course",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/talk_antenna/";
             },},{
         id: 'social-email',
         title: 'email',
