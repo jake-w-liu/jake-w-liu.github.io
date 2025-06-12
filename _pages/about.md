@@ -31,5 +31,3 @@ Starting August 1, 2025, I will be joining the Department of Electronic Engineer
 My doctoral work focused on developing algorithms for rapid calibration of antenna arrays. My research interests include antenna measurement theory, phased array calibration algorithms, and computational electromagnetics.
 
 In addition, I am a dedicated software developer with a primary focus on Julia programming, creating high-performance solutions for scientific and numerical computing. I am also exploring the JavaScript ecosystem to enhance web-based visualizations and user interaction in research tools.
-
-Students interested in (1) numerical simulations, (2) software development, (3) antenna measurement theory, or (4) computational electromagnetics are welcome to contact me via email.
