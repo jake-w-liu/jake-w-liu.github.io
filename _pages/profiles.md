@@ -3,7 +3,7 @@ layout: profiles
 permalink: /people/
 title: lab
 description: 
-nav: true
+nav: false
 nav_order: 5
 ---
 
