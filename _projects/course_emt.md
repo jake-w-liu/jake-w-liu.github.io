@@ -27,10 +27,16 @@ I fully understand that this is a demanding course—but don't worry about the g
 
 ### References
 
-No textbook is required for this course, but the following references are highly recommended: (1) Harrington's classic textbook offers a concise yet rigorous treatment of electromagnetic theory. It is strongly recommended, though readers should be mindful of some of its conventions, which may differ from those in other texts. (2) Balanis’ comprehensive text serves as a practical reference manual. While thorough, it can sometimes feel overwhelming—but it remains a valuable resource. (3) Barkeshli’s concise volume is also a gem. Portions of the lecture content follow his elegant and clear derivations. (4) Pathak’s textbook, written by my academic "grand-advisor" (my advisor’s advisor), presents more advanced material and complements the foundational coverage of the earlier references.
+No textbook is required for this course, but the following references are highly recommended:
+(1) Harrington’s classic textbook provides a concise yet rigorous treatment of electromagnetic theory. It is strongly recommended, though some of its conventions may differ from other texts.
+(2) Balanis’ comprehensive text serves as a detailed reference manual. While thorough, it can occasionally feel overwhelming, but remains an invaluable resource.
+(3) Barkeshli’s concise volume is a hidden gem; parts of the lecture content closely follow his clear and elegant derivations.
+(4) Ishimaru’s textbook, especially the second edition, offers broad coverage. However, it contains several typos—so keeping a copy of the first edition for comparison is advisable.
+(5) Pathak’s textbook, authored by my academic “grand-advisor” (my advisor’s advisor), presents more advanced topics and complements the foundational material covered in the earlier references.
 
 
 [1] R. F. Harrington, Time-Harmonic Electromagnetic Fields, McGraw-Hill, 1961.<br>
 [2] C. A. Balanis, Advanced Engineering Electromagnetics, 2nd ed., Wiley, 2012.<br>
 [3] K. Barkeshli, Advanced Electromagnetics and Scattering Theory. Springer, 2015.<br>
-[4] P. H. Pathak and R. J. Burkholder, Electromagnetic Radiation, Scattering, and Diffraction, Wiley, 2021.
+[4] A. Ishimaru, Electromagnetic Wave Propagation, Radiation and Scattering, 2nd ed., Wiley, 2017.<br>
+[5] P. H. Pathak and R. J. Burkholder, Electromagnetic Radiation, Scattering, and Diffraction, Wiley, 2021.
