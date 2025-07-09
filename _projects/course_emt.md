@@ -8,8 +8,6 @@ category: full courses
 related_publications: false
 ---
 
-_PREPARING..._
-
 ### Course Description
 
 This is a one-semester graduate course on electromagnetic theory. Chapters 1 and 2 provide a concise review of fundamental concepts, along with selected advanced topics such as the plane wave expansion (PWE). Chapters 3 and 4 focus on more advanced material, including the derivation of radiation fields using vector potentials and the development of the Stratton–Chu formulation. The course concludes with canonical electromagnetic scattering problems. Mathematical tools are introduced as needed throughout the course.
@@ -21,11 +19,11 @@ The course slides are divided into four units:
 * Chapter 1: Maxwell Equations ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch1_maxwell.pdf))
 * Chapter 2: Propagation and Transmission ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch2_propagation.pdf))
 * Chapter 3: Radiation ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch3_radiation.pdf))
-* Chapter 4: Scattering
+* Chapter 4: Scattering ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch4_scattering.pdf))
 
 ### Grading Policy
 
-I fully understand that this is a demanding course—but don't worry about the grading 😆. For details, please refer to the [attached file](http://jake-w-liu.github.io/assets/pdf/grading_presentation.pdf).
+I fully understand that this is a demanding course—but don't worry about the grading. There will be no tests in this course; instead, four oral presentations are required. For more details, please refer to the [grading policy](http://jake-w-liu.github.io/assets/pdf/grading_presentation.pdf).
 
 ### References
 
