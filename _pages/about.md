@@ -9,6 +9,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
+  width: 180 # in pixels
   more_info: 
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -26,4 +27,11 @@ latest_posts:
 ---
 
 <br>
-I am an assistant professor in the Department of Electronic Engineering at National Taipei University of Technology (NTUT). My research interests span computational electromagnetics—with a focus on pseudospectral time-domain (PSTD) methods—antenna array calibration, and antenna measurement theory. In parallel, I develop high-performance scientific software in Julia, emphasizing numerical computing, data visualization, and user-interactive tools for research applications. Feel free to contact me via email.
+Welcome to my little corner of the internet! I'm a researcher and software developer. I earned my B.S. in Electrical Engineering and my Ph.D. in Communication Engineering from National Taiwan University in 2017 and 2022, respectively.
+
+My research primarily revolves around:
+- computational electromagnetics, with a focus on the pseudospectral time-domain (PSTD) method
+- antenna array calibration algorithms
+- antenna measurement theory and near-to-far field transformation techniques
+
+In parallel with my research, I'm passionate about developing high-performance scientific software in Julia, with an emphasis on numerical computing, data visualization, and creating interactive tools. If you'd like to connect or chat about my work, feel free to send me an email.
