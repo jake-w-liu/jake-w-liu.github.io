@@ -75,6 +75,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/talk_pstd/";
+            },},{id: "projects-reflectarray-design-via-sdm",
+          title: 'Reflectarray Design via SDM',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/talk_reflectarray/";
             },},{
         id: 'social-email',
         title: 'email',
