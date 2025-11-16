@@ -49,6 +49,26 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "courses-electromagnetic-theory",
+          title: 'Electromagnetic Theory',
+          description: "graduate course",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/course_emt/";
+            },},{id: "courses-antenna-theory-fundamentals",
+          title: 'Antenna Theory Fundamentals',
+          description: "",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/talk_antenna/";
+            },},{id: "courses-introduction-to-pstd",
+          title: 'Introduction to PSTD',
+          description: "",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/talk_pstd/";
+            },},{id: "courses-reflectarray-design-via-sdm",
+          title: 'Reflectarray Design via SDM',
+          description: "",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/talk_reflectarray/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
@@ -60,27 +80,7 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-electromagnetic-theory",
-          title: 'Electromagnetic Theory',
-          description: "graduate course",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/course_emt/";
-            },},{id: "projects-antenna-theory-fundamentals",
-          title: 'Antenna Theory Fundamentals',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/talk_antenna/";
-            },},{id: "projects-introduction-to-pstd",
-          title: 'Introduction to PSTD',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/talk_pstd/";
-            },},{id: "projects-reflectarray-design-via-sdm",
-          title: 'Reflectarray Design via SDM',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/talk_reflectarray/";
-            },},{
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
