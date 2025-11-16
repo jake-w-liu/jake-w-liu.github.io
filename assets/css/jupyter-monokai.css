@@ -142,7 +142,7 @@ div.running_list_info.toolbar_info {
   border-color: transparent;
 }
 
-#project_name > ul > li > a > i.fa.fa-home {
+#course_name > ul > li > a > i.fa.fa-home {
   color: #a6e22e;
   font-size: 17pt;
   display: inline-block;
@@ -207,7 +207,7 @@ span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
   color: #888888 !important;
 }
 
-#project_name a {
+#course_name a {
   display: inline-flex;
   padding-left: 7px;
   margin-left: -2px;
@@ -426,7 +426,7 @@ div.list_item:hover {
   font-size: 18px;
 }
 
-#project_name > .breadcrumb {
+#course_name > .breadcrumb {
   padding: 0px;
   margin-bottom: 0px;
   background-color: transparent;
