@@ -34,7 +34,7 @@ The following references are highly recommended:
 2. **Balanis** offers a comprehensive and detailed reference. It can feel overwhelming and tedious at times, but remains one of the most reliable all-around sources.
 3. **Barkeshli** is a compact and elegant text; parts of these lecture notes closely follow his clear derivations.
 4. **Ishimaru**, especially the second edition, gives broad coverage of wave propagation and scattering. However, it contains several typos—consulting the first edition for comparison is often helpful.
-5. **Pathak and Burkholder** present more advanced topics; the text serves as an excellent complement to the foundational material above and reflects the lineage of my own academic “grand-advisor.”
+5. **Pathak and Burkholder** present more advanced topics; the text serves as an excellent complement to the foundational material above.
 
 **References**  
 [1] R. F. Harrington, *Time-Harmonic Electromagnetic Fields*, McGraw-Hill, 1961.  
