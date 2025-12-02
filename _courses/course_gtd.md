@@ -35,7 +35,6 @@ The following references are also recommended:
 2. **McNamara, Derek, Albert, and Pistorius** provide an accessible introduction, with clear derivations, particularly in the sections on GO.
 
 
-**References**  
 [1] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.  
 [2] P. H. Pathak and R. J. Burkholder, *Electromagnetic Radiation, Scattering, and Diffraction*, Wiley, 2021.
 [3] D. A. McNamara, C. W. Pistorius, and J. A. G. Malherbe, *Introduction to the Uniform Geometrical Theory of Diffraction*, Artech House, 1990.

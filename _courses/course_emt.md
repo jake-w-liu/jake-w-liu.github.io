@@ -36,9 +36,9 @@ The following references are highly recommended:
 4. **Ishimaru**, especially the second edition, gives broad coverage of wave propagation and scattering. However, it contains several typos—consulting the first edition for comparison is often helpful.
 5. **Pathak and Burkholder** present more advanced topics; the text serves as an excellent complement to the foundational material above.
 
-**References**  
+
 [1] R. F. Harrington, *Time-Harmonic Electromagnetic Fields*, McGraw-Hill, 1961.  
 [2] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.  
 [3] K. Barkeshli, *Advanced Electromagnetics and Scattering Theory*, Springer, 2015.  
-[4] A. Ishimaru, *Electromagnetic Wave Propagation, Radiation and Scattering*, 2nd ed., Wiley, 2017.  
+[4] A. Ishimaru, *Electromagnetic Wave Propagation, Radiation and Scattering*, 2nd ed., Wiley, 2017.
 [5] P. H. Pathak and R. J. Burkholder, *Electromagnetic Radiation, Scattering, and Diffraction*, Wiley, 2021.
