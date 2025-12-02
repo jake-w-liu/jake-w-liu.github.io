@@ -21,7 +21,7 @@ The course material is based on two primary references. The first is the note "_
 * Geometrical Theory of Diffraction
   (Balanis, [Slides](http://jake-w-liu.github.io/assets/pdf/gtd_main.pdf);  
   all slides are also available from the [official website](https://bcs.wiley.com/he-bcs/Books?action=resource&bcsId=12657&itemId=1394180012&resourceId=49971))
-* Scattering from a PEC Wedge ([Slides](http://jake-w-liu.github.io/assets/pdf/gtd_wdge.pdf))
+* Scattering from a PEC Wedge ([Slides](http://jake-w-liu.github.io/assets/pdf/gtd_wedge.pdf))
 * Asymptotic Evaluation of Integrals (Pathak, [Slides](http://jake-w-liu.github.io/assets/pdf/gtd_asymptotic.pdf))
 
 
