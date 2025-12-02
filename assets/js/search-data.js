@@ -64,6 +64,11 @@ ninja.data = [{
           description: "",
           section: "Courses",handler: () => {
               window.location.href = "/courses/talk_antenna/";
+            },},{id: "courses-introduction-to-julia-programming",
+          title: 'Introduction to Julia Programming',
+          description: "",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/talk_julia/";
             },},{id: "courses-introduction-to-pstd",
           title: 'Introduction to PSTD',
           description: "",
