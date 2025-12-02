@@ -54,6 +54,11 @@ ninja.data = [{
           description: "graduate course",
           section: "Courses",handler: () => {
               window.location.href = "/courses/course_emt/";
+            },},{id: "courses-fourier-transform",
+          title: 'Fourier Transform',
+          description: "graduate course",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/course_fourier/";
             },},{id: "courses-geometrical-theory-of-diffraction",
           title: 'Geometrical Theory of Diffraction',
           description: "graduate course",
