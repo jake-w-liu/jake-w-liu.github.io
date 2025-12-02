@@ -40,5 +40,5 @@ The following references are highly recommended:
 [1] R. F. Harrington, *Time-Harmonic Electromagnetic Fields*, McGraw-Hill, 1961.  
 [2] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.  
 [3] K. Barkeshli, *Advanced Electromagnetics and Scattering Theory*, Springer, 2015.  
-[4] A. Ishimaru, *Electromagnetic Wave Propagation, Radiation and Scattering*, 2nd ed., Wiley, 2017.
+[4] A. Ishimaru, *Electromagnetic Wave Propagation, Radiation and Scattering*, 2nd ed., Wiley, 2017.    
 [5] P. H. Pathak and R. J. Burkholder, *Electromagnetic Radiation, Scattering, and Diffraction*, Wiley, 2021.
