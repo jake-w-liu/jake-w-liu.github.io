@@ -27,7 +27,7 @@ The course material is based on two primary references. The first is the note "_
 
 ### References
 
-The primary reference for this course is Balanis' "_Advanced Engineering Electromagnetics_", ch. 13. This chapter offers a concise introduction to the formulation of GO and GTD.
+The primary reference for this course is **Balanis' "_Advanced Engineering Electromagnetics_", Ch. 13**. This chapter offers a concise introduction to the formulation of GO and GTD.
 
 The following references are also recommended:
 
