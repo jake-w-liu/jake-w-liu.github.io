@@ -284,7 +284,7 @@ scholar:
 
   query: "@*"
   group_by: type, year
-  group_order: descending, descending
+  group_order: ascending, descending
   type_order: [article, inproceedings]
 
 # Display different badges withs stats for your publications
