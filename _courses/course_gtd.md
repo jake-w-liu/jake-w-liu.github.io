@@ -27,7 +27,7 @@ The course material is based on two primary references. The first is the note "_
 
 ### References
 
-The primary reference for this course is **Balanis' "_Advanced Engineering Electromagnetics_", Ch. 13**. This chapter offers a concise introduction to the formulation of GO and GTD.
+The primary reference for this course is **Balanis' "_Advanced Engineering Electromagnetics_", Chapter 13**. This chapter offers a concise introduction to the formulation of GO and GTD.
 
 The following references are also recommended:
 
@@ -35,6 +35,7 @@ The following references are also recommended:
 2. **McNamara, Derek, Albert, and Pistorius** provide an accessible introduction, with clear derivations, particularly in the sections on GO.
 
 
-[1] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.  
-[2] P. H. Pathak and R. J. Burkholder, *Electromagnetic Radiation, Scattering, and Diffraction*, Wiley, 2021.   
-[3] D. A. McNamara, C. W. Pistorius, and J. A. G. Malherbe, *Introduction to the Uniform Geometrical Theory of Diffraction*, Artech House, 1990.
+[1] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.<br>
+[2] P. H. Pathak and R. J. Burkholder, *Electromagnetic Radiation, Scattering, and Diffraction*, Wiley, 2021.<br>
+[3] D. A. McNamara, C. W. Pistorius, and J. A. G. Malherbe, *Introduction to the Uniform Geometrical Theory of Diffraction*, Artech House, 1990.<br>
+[4] J. L. James, *Geometrical Theory of Diffraction for Electromagnetic Waves*, IET, 1986.
