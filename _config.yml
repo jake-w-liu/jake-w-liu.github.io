@@ -277,7 +277,7 @@ scholar:
   query: "@*"
   group_by: type, year
   group_order: ascending, descending
-  type_order: [book, article, inproceedings]
+  type_order: [article, inproceedings, book]
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
