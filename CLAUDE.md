@@ -74,3 +74,6 @@ GitHub Actions workflows in `.github/workflows/`:
 export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH" && bundle install
 bundle exec jekyll serve  
 http://127.0.0.1:4000
+
+python3 bin/find_pubs.py
+python3 bin/find_pubs.py --add
