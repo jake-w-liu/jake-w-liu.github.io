@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/courses/";
           },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Open-source repositories and projects",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
         },{id: "nav-lab",
           title: "lab",
           description: "",
@@ -32,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "",
+          description: "Curriculum vitae of Jake W. Liu",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -97,6 +104,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://orcid.org/0000-0001-5458-7917", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
