@@ -275,8 +275,8 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: type, year
-  group_order: ascending, descending
+  group_by: year, type
+  group_order: descending, ascending
   type_order: [article, inproceedings, book]
 
 # Display different badges withs stats for your publications

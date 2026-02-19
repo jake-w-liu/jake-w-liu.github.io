@@ -2,8 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'><b>Affiliation</b></a>  <b>&nbsp;Department of Electronic Engineering, National Taipei University of Technology</b><br>
-          <a href='#'><b>Position&nbsp;&nbsp;</b></a>  <b>&nbsp;Assistant Professor</b>
+subtitle: Assistant Professor, Department of Electronic Engineering, National Taipei University of Technology
 
 profile:
   align: right
@@ -26,13 +25,15 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<br>
-Welcome to my little corner of the internet! I'm a researcher and software developer. I earned my B.S. in Electrical Engineering and my Ph.D. in Communication Engineering from National Taiwan University in 2017 and 2022, respectively.
+Hi there! I am an Assistant Professor in the Department of Electronic Engineering at National Taipei University of Technology. I received my B.S. in Electrical Engineering and my Ph.D. in Communication Engineering from National Taiwan University in 2017 and 2022, respectively. Before joining NTUT, I was a postdoctoral researcher at the Graduate Institute of Photonics and Optoelectronics at NTU, and co-founded a startup working on RF and antenna systems.
 
-My research primarily revolves around:
-- computational electromagnetics
-- antenna array related algorithms
-- antenna measurement theory  
-- near-to-far-field transformation techniques
+I spend most of my time convincing computers to solve Maxwell's equations — and occasionally convincing students that Maxwell's equations are worth solving. My research interests include:
+- Computational electromagnetics (FDTD, PSTD, MoM)
+- High-frequency asymptotic techniques (UTD, PO)
+- Antenna array calibration and optimization
+- Antenna measurement and near-to-far-field transformation
+- Light scattering and propagation in random media
 
-In parallel with my research, I'm passionate about developing high-performance scientific software in Julia, with an emphasis on numerical computing, data visualization, and creating interactive tools. If you'd like to connect or chat about my work, feel free to send me an email.
+When I'm not chasing electromagnetic waves, I write open-source scientific software in Julia and C#, focusing on numerical methods and special functions. I also wrote a [book on electromagnetic theory](https://press.ntu.edu.tw/tw/publish/show.php?act=book&refer=ntup_book01502) (NTU Press, 2026) — partly because I love the subject, and partly because my students needed something to read besides my handwriting.
+
+Feel free to reach out via email if you have questions, want to collaborate, or just want to argue about which numerical method is best.
