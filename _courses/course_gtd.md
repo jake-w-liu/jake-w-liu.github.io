@@ -17,12 +17,12 @@ This is a one-semester graduate course on geometrical theory of diffraction (GTD
 The course material is based on two primary references. The first is the note "_Differential Geometry for GTD Applications_" by S. W. Lee, which has been retypeset in LaTeX. The second is the GTD lecture slide corresponding to Chapter 13 of Balanis’ textbook. Additional supplementary materials are provided as needed. I express appreciation to Professor Pathak for granting permission to reuse selected figures from his book in the preparation of the lecture slides on asymptotic evaluation of integrals.
 
 * Differential Geometry
-  (Lee, [Notes](http://jake-w-liu.github.io/assets/pdf/gtd_dg.pdf))
+  (Lee, [Notes](/assets/pdf/gtd_dg.pdf))
 * Geometrical Theory of Diffraction
-  (Balanis, [Slides](http://jake-w-liu.github.io/assets/pdf/gtd_main.pdf);  
+  (Balanis, [Slides](/assets/pdf/gtd_main.pdf);  
   all slides are also available from the [official website](https://bcs.wiley.com/he-bcs/Books?action=resource&bcsId=12657&itemId=1394180012&resourceId=49971))
-* Scattering from a PEC Wedge ([Slides](http://jake-w-liu.github.io/assets/pdf/gtd_wedge.pdf))
-* Asymptotic Evaluation of Integrals (Pathak, [Slides](http://jake-w-liu.github.io/assets/pdf/gtd_asymptotic.pdf))
+* Scattering from a PEC Wedge ([Slides](/assets/pdf/gtd_wedge.pdf))
+* Asymptotic Evaluation of Integrals (Pathak, [Slides](/assets/pdf/gtd_asymptotic.pdf))
 
 
 ### References

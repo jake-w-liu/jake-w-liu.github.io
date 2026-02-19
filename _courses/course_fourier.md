@@ -16,7 +16,7 @@ This one-semester graduate course introduces the Fourier transform and its appli
 
 The primary reference is **Norman Morrison’s _Introduction to Fourier Analysis_**, a pedagogical text well suited for electrical engineering students. 
 <!-- It is available through the [Internet Archive](https://archive.org/details/morrison-introduction-to-fourier-analysis).   -->
-A [supplementary slide](http://jake-w-liu.github.io/assets/pdf/intro_ft.pdf) is provided to give a practical introduction to the Fourier transform. The [lecture notes](http://jake-w-liu.github.io/assets/pdf/fourier_note.pdf) are also available.
+A [supplementary slide](/assets/pdf/intro_ft.pdf) is provided to give a practical introduction to the Fourier transform. The [lecture notes](/assets/pdf/fourier_note.pdf) are also available.
 
 ### References
 

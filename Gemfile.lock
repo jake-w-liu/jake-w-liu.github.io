@@ -63,7 +63,6 @@ GEM
     cssminify2 (2.0.1)
     csv (3.3.4)
     date (3.4.1)
-    deep_merge (1.2.2)
     drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -143,9 +142,6 @@ GEM
     jekyll-email-protect (1.1.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-get-json (1.0.0)
-      deep_merge (~> 1.2)
-      jekyll (>= 3.0)
     jekyll-imagemagick (1.4.0)
       jekyll (>= 3.4)
     jekyll-jupyter-notebook (0.0.6)
@@ -169,12 +165,9 @@ GEM
       jekyll (~> 4.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-tabs (1.2.1)
-      jekyll (>= 3.0, < 5.0)
     jekyll-toc (0.19.0)
       jekyll (>= 3.9)
       nokogiri (~> 1.12)
-    jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jemoji (0.13.0)
@@ -302,7 +295,6 @@ DEPENDENCIES
   jekyll-archives-v2
   jekyll-email-protect
   jekyll-feed
-  jekyll-get-json
   jekyll-imagemagick
   jekyll-jupyter-notebook
   jekyll-link-attributes
@@ -311,10 +303,8 @@ DEPENDENCIES
   jekyll-regex-replace
   jekyll-scholar
   jekyll-sitemap
-  jekyll-tabs
   jekyll-terser!
   jekyll-toc
-  jekyll-twitter-plugin
   jemoji
   observer
   ostruct

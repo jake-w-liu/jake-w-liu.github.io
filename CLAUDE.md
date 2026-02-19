@@ -70,3 +70,6 @@ GitHub Actions workflows in `.github/workflows/`:
 - Prettier with `@shopify/prettier-plugin-liquid` for Liquid template formatting
 - Print width: 150 characters, trailing commas: ES5 (see `.prettierrc`)
 - Pre-commit hooks configured (`.pre-commit-config.yaml`): trailing whitespace, end-of-file fix, YAML validation
+
+bundle exec jekyll serve  
+http://127.0.0.1:4000

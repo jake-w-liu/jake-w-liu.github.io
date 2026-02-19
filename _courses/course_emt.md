@@ -16,17 +16,17 @@ This is a one-semester graduate course on electromagnetic theory. Chapters 1 and
 
 The course slides are divided into four units:
 
-* Chapter 1: Maxwell Equations ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch1_maxwell.pdf))
-* Chapter 2: Propagation and Transmission ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch2_propagation.pdf))
-* Chapter 3: Radiation ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch3_radiation.pdf))
-* Chapter 4: Scattering ([Slides](http://jake-w-liu.github.io/assets/pdf/aem_ch4_scattering.pdf))
+* Chapter 1: Maxwell Equations ([Slides](/assets/pdf/aem_ch1_maxwell.pdf))
+* Chapter 2: Propagation and Transmission ([Slides](/assets/pdf/aem_ch2_propagation.pdf))
+* Chapter 3: Radiation ([Slides](/assets/pdf/aem_ch3_radiation.pdf))
+* Chapter 4: Scattering ([Slides](/assets/pdf/aem_ch4_scattering.pdf))
 
 
 ### References
 
 The primary reference for this course is:
 
-**• J. W. Liu, _Lectures on Electromagnetic Theory_, NTU Press (upcoming...)**
+**• J. W. Liu, _Lectures on Electromagnetic Theory_, NTU Press, 2026.**
 
 The following references are highly recommended:
 
@@ -37,8 +37,8 @@ The following references are highly recommended:
 5. **Pathak and Burkholder** present more advanced topics; the text serves as an excellent complement to the foundational material above.
 
 
-[1] R. F. Harrington, *Time-Harmonic Electromagnetic Fields*, McGraw-Hill, 1961.  
-[2] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.  
-[3] K. Barkeshli, *Advanced Electromagnetics and Scattering Theory*, Springer, 2015.  
-[4] A. Ishimaru, *Electromagnetic Wave Propagation, Radiation and Scattering*, 2nd ed., Wiley, 2017.    
+[1] R. F. Harrington, *Time-Harmonic Electromagnetic Fields*, McGraw-Hill, 1961.<br>
+[2] C. A. Balanis, *Advanced Engineering Electromagnetics*, 2nd ed., Wiley, 2012.<br>
+[3] K. Barkeshli, *Advanced Electromagnetics and Scattering Theory*, Springer, 2015.<br>
+[4] A. Ishimaru, *Electromagnetic Wave Propagation, Radiation and Scattering*, 2nd ed., Wiley, 2017.<br>
 [5] P. H. Pathak and R. J. Burkholder, *Electromagnetic Radiation, Scattering, and Diffraction*, Wiley, 2021.

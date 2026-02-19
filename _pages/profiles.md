@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: lab
-description: 
+description: Computational Electromagnetics Laboratory
 nav: false
 nav_order: 5
 ---
