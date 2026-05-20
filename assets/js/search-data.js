@@ -64,6 +64,11 @@ ninja.data = [{
           description: "graduate course",
           section: "Courses",handler: () => {
               window.location.href = "/courses/course_gtd/";
+            },},{id: "courses-mathematical-physics",
+          title: 'Mathematical Physics',
+          description: "graduate course",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/course_mp/";
             },},{id: "courses-antenna-theory-fundamentals",
           title: 'Antenna Theory Fundamentals',
           description: "",
