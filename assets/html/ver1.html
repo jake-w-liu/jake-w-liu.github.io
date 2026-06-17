@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <title>【A+計畫】高階機群自適應通訊與修復系統 (Ver 1 定案版)</title>
     <style>
-        body { margin: 0; overflow: hidden; background-color: #020617; color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; height: 100vh; }
-        
-        #sidebar { flex: 1; min-width: 350px; max-width: 380px; background: #0f172a; border-right: 1px solid #334155; display: flex; flex-direction: column; padding: 20px; z-index: 10; box-shadow: 10px 0 30px rgba(0,0,0,0.5); }
-        #canvas-area { flex: 3; position: relative; background-color: #020617; overflow: hidden; }
+        body { margin: 0; overflow: hidden; background-color: #0B1013; color: #FFFFFB; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; height: 100vh; }
 
-        .header { border-bottom: 2px solid #0ea5e9; padding-bottom: 15px; margin-bottom: 20px; }
-        .header h1 { font-size: 20px; margin: 0; color: #f0f9ff; }
-        .header p { font-size: 11px; color: #94a3b8; margin: 5px 0 0 0; text-transform: uppercase; letter-spacing: 1px; }
+        #sidebar { flex: 1; min-width: 350px; max-width: 380px; background: #08192D; border-right: 1px solid #255359; display: flex; flex-direction: column; padding: 20px; z-index: 10; box-shadow: 10px 0 30px rgba(8, 8, 8, 0.5); }
+        #canvas-area { flex: 3; position: relative; background-color: #0B1013; overflow: hidden; }
+
+        .header { border-bottom: 2px solid #2EA9DF; padding-bottom: 15px; margin-bottom: 20px; }
+        .header h1 { font-size: 20px; margin: 0; color: #FFFFFB; }
+        .header p { font-size: 11px; color: #9B90C2; margin: 5px 0 0 0; text-transform: uppercase; letter-spacing: 1px; }
 
         .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-        .m-box { background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 10px; text-align: center; }
-        .m-label { font-size: 10px; color: #94a3b8; }
-        .m-val { font-size: 16px; font-weight: bold; color: #38bdf8; margin-top: 5px; transition: 0.3s; }
+        .m-box { background: #0F2540; border: 1px solid #255359; border-radius: 6px; padding: 10px; text-align: center; }
+        .m-label { font-size: 10px; color: #9B90C2; }
+        .m-val { font-size: 16px; font-weight: bold; color: #2EA9DF; margin-top: 5px; transition: 0.3s; }
 
         .btn-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-        button { padding: 12px; font-size: 14px; font-weight: bold; cursor: pointer; border: 1px solid #334155; border-radius: 6px; background: #1e293b; color: #cbd5e1; text-align: left; transition: 0.3s; }
-        button.active { background: #0ea5e9; color: white; border-color: #0ea5e9; box-shadow: 0 0 15px rgba(14,165,233,0.4); }
+        button { padding: 12px; font-size: 14px; font-weight: bold; cursor: pointer; border: 1px solid #255359; border-radius: 6px; background: #0F2540; color: #A5DEE4; text-align: left; transition: 0.3s; }
+        button.active { background: #2EA9DF; color: #FFFFFB; border-color: #2EA9DF; box-shadow: 0 0 15px rgba(46, 169, 223, 0.4); }
 
-        #terminal { flex: 1; background: #000; border: 1px solid #334155; border-radius: 6px; padding: 10px; font-family: 'Courier New', monospace; font-size: 11px; color: #4ade80; overflow-y: auto; line-height: 1.5; }
-        .log-t { color: #64748b; }
-        .log-crit { color: #ef4444; font-weight: bold; }
-        .log-warn { color: #fbbf24; }
-        .log-info { color: #38bdf8; }
-        .log-success { color: #34d399; font-weight: bold; }
+        #terminal { flex: 1; background: #080808; border: 1px solid #255359; border-radius: 6px; padding: 10px; font-family: 'Courier New', monospace; font-size: 11px; color: #5DAC81; overflow-y: auto; line-height: 1.5; }
+        .log-t { color: #577C8A; }
+        .log-crit { color: #F75C2F; font-weight: bold; }
+        .log-warn { color: #EFBB24; }
+        .log-info { color: #2EA9DF; }
+        .log-success { color: #33A6B8; font-weight: bold; }
 
         canvas { display: block; width: 100%; height: 100%; }
-        .grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; }
+        .grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 255, 251, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 251, 0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; }
     </style>
 </head>
 <body>
@@ -44,7 +44,7 @@
         <div class="m-box"><div class="m-label">主通訊鏈路</div><div id="m-bw" class="m-val">低傳輸量</div></div>
         <div class="m-box"><div class="m-label">傳輸延遲</div><div id="m-lat" class="m-val">常規延遲</div></div>
         <div class="m-box"><div class="m-label">在線節點</div><div id="m-nodes" class="m-val" style="font-family: monospace;">10 / 10</div></div>
-        <div class="m-box"><div class="m-label">演算法狀態</div><div id="m-algo" class="m-val" style="color:#34d399; font-family: monospace;">READY</div></div>
+        <div class="m-box"><div class="m-label">演算法狀態</div><div id="m-algo" class="m-val" style="color:#33A6B8; font-family: monospace;">READY</div></div>
     </div>
     <div class="btn-group">
         <button id="btn1" class="active">STAGE 1: 廣域網格與跳躍搜索</button>
@@ -89,12 +89,12 @@
 
     // --- 繪製雷達掃描波束 ---
     function drawSearchRadar(d) {
-        let sweep = Math.sin(time * 3 + d.id) * 0.6; 
+        let sweep = Math.sin(time * 3 + d.id) * 0.6;
         let baseAngle = d.angle;
-        let radarRadius = 160; 
+        let radarRadius = 160;
         ctx.beginPath();
         ctx.moveTo(d.x, d.y);
-        ctx.arc(d.x, d.y, radarRadius, baseAngle + sweep - 0.5, baseAngle + sweep + 0.5); 
+        ctx.arc(d.x, d.y, radarRadius, baseAngle + sweep - 0.5, baseAngle + sweep + 0.5);
         ctx.lineTo(d.x, d.y);
         let grad = ctx.createRadialGradient(d.x, d.y, 0, d.x, d.y, radarRadius);
         let color = d.squad === 'A' ? '56, 189, 248' : '52, 211, 153';
@@ -110,37 +110,37 @@
         ctx.translate(d.x, d.y);
 
         const isReturning = d.status === 'returning';
-        let color = d.squad === 'A' ? '#38bdf8' : (d.squad === 'B' ? '#34d399' : '#c084fc');
-        if (d.isRelay) color = '#fbbf24'; 
-        else if (d.isPreDeploying) color = '#c084fc'; 
-        if (isReturning) color = '#f97316'; 
+        let color = d.squad === 'A' ? '#2EA9DF' : (d.squad === 'B' ? '#33A6B8' : '#B28FCE');
+        if (d.isRelay) color = '#EFBB24';
+        else if (d.isPreDeploying) color = '#B28FCE';
+        if (isReturning) color = '#F05E1C';
 
-        ctx.rotate(d.angle); 
+        ctx.rotate(d.angle);
 
-        ctx.fillStyle = 'rgba(15, 23, 42, 0.9)'; 
+        ctx.fillStyle = 'rgba(8, 25, 45, 0.9)';
         ctx.strokeStyle = color;
         ctx.lineWidth = 1.5;
 
         // 飛機形狀
         ctx.beginPath();
-        ctx.moveTo(12, 0);       
+        ctx.moveTo(12, 0);
         ctx.lineTo(4, 3);
-        ctx.lineTo(-2, 14);      
+        ctx.lineTo(-2, 14);
         ctx.lineTo(-6, 14);
         ctx.lineTo(-2, 3);
         ctx.lineTo(-10, 2);
-        ctx.lineTo(-14, 6);      
+        ctx.lineTo(-14, 6);
         ctx.lineTo(-16, 6);
-        ctx.lineTo(-13, 0);      
-        ctx.lineTo(-16, -6);     
+        ctx.lineTo(-13, 0);
+        ctx.lineTo(-16, -6);
         ctx.lineTo(-14, -6);
         ctx.lineTo(-10, -2);
         ctx.lineTo(-2, -3);
-        ctx.lineTo(-6, -14);     
+        ctx.lineTo(-6, -14);
         ctx.lineTo(-2, -14);
         ctx.lineTo(4, -3);
         ctx.closePath();
-        
+
         if (stage >= 2 && !isReturning && d.status !== 'standby') {
             ctx.shadowColor = color;
             ctx.shadowBlur = d.isRelay ? 10 : 5;
@@ -151,16 +151,16 @@
 
         ctx.beginPath();
         ctx.arc(8, 0, 2, 0, Math.PI*2);
-        ctx.fillStyle = isReturning ? '#f97316' : color;
+        ctx.fillStyle = isReturning ? '#F05E1C' : color;
         ctx.fill();
         ctx.restore();
 
         // 標籤
-        ctx.fillStyle = 'rgba(15, 23, 42, 0.7)';
+        ctx.fillStyle = 'rgba(8, 25, 45, 0.7)';
         let label = isReturning ? '🔋 返航換電' : (d.isPreDeploying ? '⬆️ 預先就位' : (d.isRelay ? `中繼節點` : d.name));
         let tw = ctx.measureText(label).width + 8;
         ctx.fillRect(d.x - tw/2, d.y + 12, tw, 18);
-        ctx.fillStyle = isReturning ? '#fbbf24' : '#f8fafc';
+        ctx.fillStyle = isReturning ? '#EFBB24' : '#FFFFFB';
         ctx.font = 'bold 10px Arial'; ctx.textAlign = 'center';
         ctx.fillText(label, d.x, d.y + 24);
     }
@@ -171,22 +171,22 @@
             {x: width*0.25, y: height*0.80},
             {x: width*0.48, y: height*0.85},
             {x: width*0.70, y: height*0.70},
-            {x: targetMain.x - 40, y: targetMain.y + 30} 
+            {x: targetMain.x - 40, y: targetMain.y + 30}
         ];
     }
-    
+
     function getTopPath() {
         return [
             {x: width*0.25, y: height*0.25},
             {x: width*0.48, y: height*0.15},
             {x: width*0.70, y: height*0.25},
-            {x: targetMain.x - 40, y: targetMain.y - 20} 
+            {x: targetMain.x - 40, y: targetMain.y - 20}
         ];
     }
 
     // --- 檢查隨機座標是否落在障礙物內 ---
     function isValidSearchPoint(x, y) {
-        let pad = 40; 
+        let pad = 40;
         if (x > obstacle.x - pad && x < obstacle.x + obstacle.w + pad &&
             y > obstacle.y - pad && y < obstacle.y + obstacle.h + pad) {
             return false;
@@ -210,7 +210,7 @@
     // --- ★ 亮點：A*概念智慧尋路演算法 (找出繞行角點) ---
     function findPath(x1, y1, x2, y2) {
         if (!isLineBlocked(x1, y1, x2, y2, obstacle)) return [{x: x2, y: y2}];
-        
+
         let pad = 45; // 安全飛行距離
         let TL = {x: obstacle.x - pad, y: obstacle.y - pad};
         let TR = {x: obstacle.x + obstacle.w + pad, y: obstacle.y - pad};
@@ -251,18 +251,18 @@
         for(let p of path) {
             ctx.lineTo(p.x, p.y);
         }
-        
+
         if (path.length > 1) {
             // 被遮蔽而繞行的跳躍 Mesh 路徑 (黃綠色虛線)
-            ctx.strokeStyle='rgba(16,185,129,0.5)'; ctx.lineWidth=1.5; ctx.setLineDash([4,4]); ctx.lineDashOffset = -time*15; ctx.stroke(); ctx.setLineDash([]);
-            
+            ctx.strokeStyle='rgba(0, 170, 144, 0.5)'; ctx.lineWidth=1.5; ctx.setLineDash([4,4]); ctx.lineDashOffset = -time*15; ctx.stroke(); ctx.setLineDash([]);
+
             // 繪製微型中繼跳板(Hop Node)
             for(let i=0; i<path.length-1; i++) {
-                ctx.beginPath(); ctx.arc(path[i].x, path[i].y, 3, 0, Math.PI*2); ctx.fillStyle='rgba(16,185,129,0.9)'; ctx.fill();
+                ctx.beginPath(); ctx.arc(path[i].x, path[i].y, 3, 0, Math.PI*2); ctx.fillStyle='rgba(0, 170, 144, 0.9)'; ctx.fill();
             }
         } else {
             // 無遮蔽直線
-            ctx.strokeStyle='rgba(16,185,129,0.15)'; ctx.lineWidth=1; ctx.stroke();
+            ctx.strokeStyle='rgba(0, 170, 144, 0.15)'; ctx.lineWidth=1; ctx.stroke();
         }
     }
 
@@ -282,7 +282,7 @@
                 drones.push({
                     id: i, name: i<4 ? `Alpha-${i+1}` : (i<8 ? `Beta-${i-3}` : `Res-${i-7}`),
                     squad: i<4 ? 'A' : (i<8 ? 'B' : 'R'),
-                    x: groundStation.x, y: groundStation.y, 
+                    x: groundStation.x, y: groundStation.y,
                     waypoints: [],
                     angle: 0, status: 'standby', isRelay: false, isPreDeploying: false, relayIdx: -1
                 });
@@ -299,7 +299,7 @@
         targetMain.x = width*0.85; targetMain.y = height*0.4;
         targetSub.x = width*0.85; targetSub.y = height*0.85;
         obstacle = { x: width * 0.35, y: height * 0.35, w: width * 0.25, h: height * 0.30, label: '實體與通訊遮蔽區' };
-        
+
         if (stage === 2) relayPts = getBottomPath();
         else if (stage === 3 && document.getElementById('m-algo').innerText.includes("TOP ROUTE")) relayPts = getTopPath();
     });
@@ -314,16 +314,16 @@
     function setStage(s) {
         stage = s; time = 0;
         clearScripts();
-        
+
         document.querySelectorAll('button').forEach((b,i) => b.className = (i+1===s)?'active':'');
         const mBw = document.getElementById('m-bw'), mLat = document.getElementById('m-lat'), mAlgo = document.getElementById('m-algo');
 
         if(s===1) {
             log("STAGE 1: 啟動全域動態網格搜索，演算法自動繞行遮蔽區域。");
-            mBw.innerText="低傳輸量"; mBw.style.color="#38bdf8";
-            mLat.innerText="常規延遲"; mLat.style.color="#38bdf8";
+            mBw.innerText="低傳輸量"; mBw.style.color="#2EA9DF";
+            mLat.innerText="常規延遲"; mLat.style.color="#2EA9DF";
             mAlgo.innerText="SEARCHING";
-            
+
             drones.forEach((d) => {
                 d.isPreDeploying = false;
                 if (d.squad === 'R' || d.status === 'returning') {
@@ -342,21 +342,21 @@
             });
         } else if(s===2) {
             log("STAGE 2: 目標確認！構建【下方閃電避障路徑】60GHz 高頻骨幹。", "info");
-            mBw.innerText="超高傳輸量"; mBw.style.color="#38bdf8";
-            mLat.innerText="極低延遲"; mLat.style.color="#38bdf8";
+            mBw.innerText="超高傳輸量"; mBw.style.color="#2EA9DF";
+            mLat.innerText="極低延遲"; mLat.style.color="#2EA9DF";
             mAlgo.innerText="BOTTOM ROUTE (ACTIVE)";
-            
+
             relayPts = getBottomPath();
-            
+
             drones.forEach((d) => {
                 d.isPreDeploying = false;
-                if (d.status === 'returning') return; 
-                if(d.squad==='A') { 
-                    d.status='active'; d.isRelay=true; d.relayIdx=d.id; 
+                if (d.status === 'returning') return;
+                if(d.squad==='A') {
+                    d.status='active'; d.isRelay=true; d.relayIdx=d.id;
                     d.waypoints = findPath(d.x, d.y, relayPts[d.relayIdx].x, relayPts[d.relayIdx].y);
                 }
                 else if(d.name==='Beta-1') { d.status='active'; d.isRelay=false; d.waypoints = findPath(d.x, d.y, targetSub.x-50, targetSub.y); }
-                else if(d.name==='Beta-2') { d.status='active'; d.isRelay=false; d.waypoints = findPath(d.x, d.y, width*0.65, height*0.9); } 
+                else if(d.name==='Beta-2') { d.status='active'; d.isRelay=false; d.waypoints = findPath(d.x, d.y, width*0.65, height*0.9); }
                 else { d.status='standby'; d.waypoints = []; d.x = groundStation.x; d.y = groundStation.y; d.isRelay=false; }
             });
         } else if(s===3) {
@@ -368,20 +368,20 @@
     function runStage3Script() {
         log("STAGE 3: 啟動電量耗盡與【先建後破】預先重構演練", "warn");
         const mBw = document.getElementById('m-bw'), mLat = document.getElementById('m-lat'), mAlgo = document.getElementById('m-algo');
-        mAlgo.innerText = "TOPOLOGY MONITORING"; mAlgo.style.color = "#fbbf24";
+        mAlgo.innerText = "TOPOLOGY MONITORING"; mAlgo.style.color = "#EFBB24";
 
         relayPts = getBottomPath();
-        
+
         // T+2s: 下方第一台無人機離開
         scriptTimeoutIds.push(setTimeout(() => {
             if(stage !== 3) return;
             let d1 = drones.find(d => d.isRelay && d.relayIdx === 1);
             if(d1) {
-                d1.status = 'returning'; d1.isRelay = false; 
+                d1.status = 'returning'; d1.isRelay = false;
                 d1.waypoints = findPath(d1.x, d1.y, groundStation.x, groundStation.y);
                 log(`[電量警示] 下方節點 ${d1.name} 電量不足，脫離鏈路返航換電。`, "warn");
-                mBw.innerText = "連線拉長 (不穩)"; mBw.style.color = "#fbbf24";
-                mLat.innerText = "延遲升高"; mLat.style.color = "#fbbf24";
+                mBw.innerText = "連線拉長 (不穩)"; mBw.style.color = "#EFBB24";
+                mLat.innerText = "延遲升高"; mLat.style.color = "#EFBB24";
             }
         }, 2000));
 
@@ -390,14 +390,14 @@
             if(stage !== 3) return;
             log(`[預先部署] 預測下方鏈路即將中斷，系統提前派遣新機至【上方路徑】卡位！`, "info");
             mAlgo.innerText = "PRE-DEPLOYING TOP ROUTE";
-            
+
             let standbys = drones.filter(d => d.status === 'standby' && d.name !== 'Beta-1' && d.name !== 'Beta-2');
             let topPts = getTopPath();
-            
+
             if(standbys.length >= 2) {
                 standbys[0].status = 'active'; standbys[0].isPreDeploying = true; standbys[0].preDeployIdx = 1;
                 standbys[0].waypoints = findPath(standbys[0].x, standbys[0].y, topPts[1].x, topPts[1].y);
-                
+
                 standbys[1].status = 'active'; standbys[1].isPreDeploying = true; standbys[1].preDeployIdx = 2;
                 standbys[1].waypoints = findPath(standbys[1].x, standbys[1].y, topPts[2].x, topPts[2].y);
             }
@@ -408,11 +408,11 @@
             if(stage !== 3) return;
             let d2 = drones.find(d => d.isRelay && d.relayIdx === 2);
             if(d2) {
-                d2.status = 'returning'; d2.isRelay = false; 
+                d2.status = 'returning'; d2.isRelay = false;
                 d2.waypoints = findPath(d2.x, d2.y, groundStation.x, groundStation.y);
                 log(`[嚴重警告] 下方第 2 節點離隊，鏈路僅剩兩台，視距遭障礙物完全阻斷！`, "crit");
-                mBw.innerText = "連線中斷"; mBw.style.color = "#ef4444";
-                mLat.innerText = "TIMEOUT"; mLat.style.color = "#ef4444";
+                mBw.innerText = "連線中斷"; mBw.style.color = "#F75C2F";
+                mLat.innerText = "TIMEOUT"; mLat.style.color = "#F75C2F";
             }
         }, 9000));
 
@@ -421,9 +421,9 @@
             if(stage !== 3) return;
             log(`[系統切換] 啟動無縫接軌！訊號瞬間切換至已預先佈署的【上方閃電鏈路】。`, "success");
             mAlgo.innerText = "SWITCHING TO TOP ROUTE";
-            
+
             relayPts = getTopPath();
-            
+
             let preDeployed = drones.filter(d => d.isPreDeploying);
             preDeployed.forEach(d => {
                 d.isPreDeploying = false; d.isRelay = true; d.relayIdx = d.preDeployIdx;
@@ -439,9 +439,9 @@
         // T+13s: 恢復穩定
         scriptTimeoutIds.push(setTimeout(() => {
             if(stage !== 3) return;
-            mBw.innerText = "超高傳輸量"; mBw.style.color = "#38bdf8";
-            mLat.innerText = "極低延遲"; mLat.style.color = "#38bdf8";
-            mAlgo.innerText = "STABLE (TOP ROUTE)"; mAlgo.style.color = "#34d399";
+            mBw.innerText = "超高傳輸量"; mBw.style.color = "#2EA9DF";
+            mLat.innerText = "極低延遲"; mLat.style.color = "#2EA9DF";
+            mAlgo.innerText = "STABLE (TOP ROUTE)"; mAlgo.style.color = "#33A6B8";
             log(`[恢復] 補位完成，無縫接軌於障礙物上方維持 4 節點穩定鏈路。`, "success");
         }, 13000));
     }
@@ -452,13 +452,13 @@
         ctx.clearRect(0,0,width,height);
 
         // 1. 畫中央實體障礙物
-        ctx.fillStyle = 'rgba(100, 116, 139, 0.4)'; 
+        ctx.fillStyle = 'rgba(87, 124, 138, 0.4)';
         ctx.fillRect(obstacle.x, obstacle.y, obstacle.w, obstacle.h);
-        ctx.strokeStyle = 'rgba(148, 163, 184, 0.8)'; 
-        ctx.setLineDash([5,5]); 
+        ctx.strokeStyle = 'rgba(155, 144, 194, 0.8)';
+        ctx.setLineDash([5,5]);
         ctx.strokeRect(obstacle.x, obstacle.y, obstacle.w, obstacle.h);
-        ctx.setLineDash([]); 
-        ctx.fillStyle = 'rgba(226, 232, 240, 1)'; ctx.font='bold 13px Arial'; ctx.textAlign='center'; 
+        ctx.setLineDash([]);
+        ctx.fillStyle = 'rgba(252, 250, 242, 1)'; ctx.font='bold 13px Arial'; ctx.textAlign='center';
         ctx.fillText(obstacle.label, obstacle.x + obstacle.w/2, obstacle.y + obstacle.h/2);
 
         // 2. 畫連線與阻斷警告
@@ -472,39 +472,39 @@
                 const blocked = isLineBlocked(prev.x, prev.y, d.x, d.y, obstacle);
 
                 ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(d.x, d.y);
-                
+
                 if (blocked) {
-                    ctx.strokeStyle='rgba(239,68,68,0.9)'; ctx.lineWidth=2; ctx.setLineDash([10,10]); ctx.lineDashOffset = -time*30;
+                    ctx.strokeStyle='rgba(247, 92, 47, 0.9)'; ctx.lineWidth=2; ctx.setLineDash([10,10]); ctx.lineDashOffset = -time*30;
                     let midX = (prev.x + d.x) / 2; let midY = (prev.y + d.y) / 2;
                     ctx.save();
-                    ctx.fillStyle = 'rgba(239,68,68,0.15)'; ctx.fillRect(midX - 70, midY - 12, 140, 20);
-                    ctx.strokeStyle = 'rgba(239,68,68,0.8)'; ctx.setLineDash([]); ctx.strokeRect(midX - 70, midY - 12, 140, 20);
-                    ctx.fillStyle = '#f8fafc'; ctx.font = 'bold 10px Arial'; ctx.textAlign='center';
+                    ctx.fillStyle = 'rgba(247, 92, 47, 0.15)'; ctx.fillRect(midX - 70, midY - 12, 140, 20);
+                    ctx.strokeStyle = 'rgba(247, 92, 47, 0.8)'; ctx.setLineDash([]); ctx.strokeRect(midX - 70, midY - 12, 140, 20);
+                    ctx.fillStyle = '#FFFFFB'; ctx.font = 'bold 10px Arial'; ctx.textAlign='center';
                     ctx.fillText('❌ 視距阻斷 (LOS BLOCKED)', midX, midY + 3);
                     ctx.restore();
-                } else if(isReady && prevReady) { 
-                    ctx.strokeStyle='#38bdf8'; ctx.lineWidth=4; ctx.shadowBlur=12; ctx.shadowColor='#38bdf8'; ctx.setLineDash([]);
-                } else { 
-                    ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2; ctx.setLineDash([6,6]); ctx.lineDashOffset = -time*20; 
+                } else if(isReady && prevReady) {
+                    ctx.strokeStyle='#2EA9DF'; ctx.lineWidth=4; ctx.shadowBlur=12; ctx.shadowColor='#2EA9DF'; ctx.setLineDash([]);
+                } else {
+                    ctx.strokeStyle='#EFBB24'; ctx.lineWidth=2; ctx.setLineDash([6,6]); ctx.lineDashOffset = -time*20;
                 }
                 ctx.stroke(); ctx.setLineDash([]); ctx.shadowBlur=0;
                 prev = d;
             });
-            
+
             if(chain.length>0) {
                 const blocked = isLineBlocked(prev.x, prev.y, targetMain.x, targetMain.y, obstacle);
                 const prevReady = prev.waypoints.length === 0;
                 ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(targetMain.x, targetMain.y);
                 if (blocked) {
-                    ctx.strokeStyle='rgba(239,68,68,0.9)'; ctx.lineWidth=2; ctx.setLineDash([10,10]); ctx.lineDashOffset = -time*30;
+                    ctx.strokeStyle='rgba(247, 92, 47, 0.9)'; ctx.lineWidth=2; ctx.setLineDash([10,10]); ctx.lineDashOffset = -time*30;
                 } else if (prevReady) {
-                    ctx.strokeStyle='#38bdf8'; ctx.lineWidth=4; ctx.shadowBlur=12; ctx.shadowColor='#38bdf8'; ctx.setLineDash([]);
+                    ctx.strokeStyle='#2EA9DF'; ctx.lineWidth=4; ctx.shadowBlur=12; ctx.shadowColor='#2EA9DF'; ctx.setLineDash([]);
                 } else {
-                    ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2; ctx.setLineDash([6,6]); ctx.lineDashOffset = -time*20;
+                    ctx.strokeStyle='#EFBB24'; ctx.lineWidth=2; ctx.setLineDash([6,6]); ctx.lineDashOffset = -time*20;
                 }
                 ctx.stroke(); ctx.setLineDash([]); ctx.shadowBlur=0;
             }
-            
+
             // 綠色小隊專屬連線 (智慧路由)
             const b1 = drones.find(d => d.name === 'Beta-1');
             const b2 = drones.find(d => d.name === 'Beta-2');
@@ -512,7 +512,7 @@
                 drawSmartLowLink(groundStation.x, groundStation.y, b2.x, b2.y);
                 drawSmartLowLink(b2.x, b2.y, b1.x, b1.y);
                 ctx.beginPath(); ctx.moveTo(b1.x, b1.y); ctx.lineTo(targetSub.x, targetSub.y);
-                ctx.strokeStyle='rgba(249,115,22,0.6)'; ctx.lineWidth=2; ctx.setLineDash([4,4]); ctx.lineDashOffset = -time*10; ctx.stroke(); ctx.setLineDash([]);
+                ctx.strokeStyle='rgba(240, 94, 28, 0.6)'; ctx.lineWidth=2; ctx.setLineDash([4,4]); ctx.lineDashOffset = -time*10; ctx.stroke(); ctx.setLineDash([]);
             }
         }
 
@@ -520,18 +520,18 @@
         drones.forEach(d => {
             if(d.status === 'standby') {
                 d.x = groundStation.x; d.y = groundStation.y; d.angle = 0;
-                return; 
+                return;
             }
-            
+
             if (d.waypoints && d.waypoints.length > 0) {
                 let target = d.waypoints[0];
-                let dx = target.x - d.x; 
-                let dy = target.y - d.y; 
+                let dx = target.x - d.x;
+                let dy = target.y - d.y;
                 let dist = Math.hypot(dx, dy);
 
                 if (dist < 10) {
                     d.waypoints.shift();
-                    
+
                     if (d.waypoints.length === 0) {
                         if (d.status === 'returning') {
                             d.status = 'standby'; d.angle = 0;
@@ -553,25 +553,25 @@
             } else {
                 d.x += Math.cos(time * 3 + d.id) * 0.3;
                 d.y += Math.sin(time * 2 + d.id) * 0.3;
-                d.angle += Math.sin(time + d.id) * 0.005; 
+                d.angle += Math.sin(time + d.id) * 0.005;
             }
-            
+
             // 畫 Stage 1 雷達與智慧低頻跳躍折線
             if (stage === 1 && !d.isRelay && !d.isPreDeploying && d.status === 'active') {
-                drawSearchRadar(d); 
+                drawSearchRadar(d);
                 drawSmartLowLink(groundStation.x, groundStation.y, d.x, d.y);
             }
-            
+
             // 畫移動軌跡虛線 (展示避障航線或預先佈署)
             if ((stage === 3 || stage === 1) && d.waypoints.length > 0 && d.status !== 'returning') {
-                ctx.beginPath(); 
+                ctx.beginPath();
                 ctx.moveTo(d.x, d.y);
                 for(let wp of d.waypoints) ctx.lineTo(wp.x, wp.y);
-                ctx.strokeStyle='rgba(251,191,36,0.6)'; ctx.lineWidth=1.5; ctx.setLineDash([3,4]); ctx.stroke(); ctx.setLineDash([]);
-                
+                ctx.strokeStyle='rgba(239, 187, 36, 0.6)'; ctx.lineWidth=1.5; ctx.setLineDash([3,4]); ctx.stroke(); ctx.setLineDash([]);
+
                 if (d.isPreDeploying) {
                     let lastWp = d.waypoints[d.waypoints.length - 1];
-                    ctx.fillStyle = '#c084fc'; ctx.font = '10px Arial'; ctx.textAlign='center';
+                    ctx.fillStyle = '#B28FCE'; ctx.font = '10px Arial'; ctx.textAlign='center';
                     ctx.fillText('前往卡位', lastWp.x, lastWp.y - 15);
                 }
             }
@@ -582,9 +582,9 @@
         // 4. 畫基地台與目標
         [groundStation, targetMain, targetSub].forEach((p,i) => {
             ctx.beginPath(); ctx.arc(p.x, p.y, i===0?22:16, 0, Math.PI*2);
-            ctx.fillStyle = i===0 ? '#1e293b' : 'rgba(239,68,68,0.2)'; ctx.fill();
-            ctx.strokeStyle = i===0 ? '#0ea5e9' : '#ef4444'; ctx.lineWidth=2; ctx.stroke();
-            ctx.fillStyle = '#f8fafc'; ctx.font = 'bold 11px Arial'; ctx.textAlign='center';
+            ctx.fillStyle = i===0 ? '#0F2540' : 'rgba(247, 92, 47, 0.2)'; ctx.fill();
+            ctx.strokeStyle = i===0 ? '#2EA9DF' : '#F75C2F'; ctx.lineWidth=2; ctx.stroke();
+            ctx.fillStyle = '#FFFFFB'; ctx.font = 'bold 11px Arial'; ctx.textAlign='center';
             const labels = ['C2 基地台', '主要目標', '次要目標'];
             ctx.fillText(labels[i], p.x, p.y + 35);
         });
