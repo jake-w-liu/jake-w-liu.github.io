@@ -1,0 +1,61 @@
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% assign sorted_publications = data[1] | sort: 'releaseDate' | reverse %}
+
+  {%- assign journals = sorted_publications | where: "abbr", "Journal" -%}
+  {%- assign proceedings = sorted_publications | where: "abbr", "Proceedings" -%}
+
+  <!-- Journals -->
+  <h3>Journals</h3>
+  {% for content in journals %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+          {% assign date = content.releaseDate | default: '' | split: '-' | join: '.' %}
+          <table class="table-cv">
+            <tbody>
+              <tr>
+                <td>
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+          <h6 class="title font-weight-bold ml-1 ml-md-4">
+            <a href="{{ content.url }}">{{ content.name }}</a>
+          </h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.publisher }}</h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+
+  <!-- Proceedings -->
+  {% for content in proceedings %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+          {% assign date = content.releaseDate | default: '' | split: '-' | join: '.' %}
+          <table class="table-cv">
+            <tbody>
+              <tr>
+                <td>
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+          <h6 class="title font-weight-bold ml-1 ml-md-4">
+            <a href="{{ content.url }}">{{ content.name }}</a>
+          </h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.publisher }}</h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

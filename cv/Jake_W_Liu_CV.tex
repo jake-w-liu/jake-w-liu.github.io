@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\definecolor{accent}{HTML}{1F4E79}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
+\setlist[itemize]{leftmargin=1.15em,itemsep=0.18em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=0.45em,topsep=0.25em}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{0.85em}{0.35em}
+\pagestyle{empty}
+
+\newcommand{\daterange}[1]{\textcolor{accent}{#1}}
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \daterange{#2} \\
+    #3 & #4 \\
+  \end{tabularx}
+}
+\newcommand{\pubdoi}[1]{\href{https://doi.org/#1}{doi:#1}}
+\newcommand{\name}{\textbf{Jake W. Liu}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Jake W. Liu}}\\[0.25em]
+Assistant Professor, Department of Electronic Engineering, National Taipei University of Technology\\[0.25em]
+{\small
+\href{mailto:jwliu@ntut.edu.tw}{jwliu@ntut.edu.tw} \quad
+\href{https://jake-w-liu.github.io}{jake-w-liu.github.io} \quad
+\href{https://github.com/jake-w-liu}{GitHub: jake-w-liu}\\
+\href{https://orcid.org/0000-0001-5458-7917}{ORCID: 0000-0001-5458-7917}}\\
+Last updated: May 12, 2026
+\end{center}
+
+\section*{Profile}
+Assistant Professor in the Department of Electronic Engineering at National Taipei University of Technology. Research interests span computational electromagnetics, high-frequency asymptotic methods, antenna array calibration and optimization, antenna measurement and near-to-far-field transformation, and light scattering and propagation in random media. Also develops open-source scientific software in Julia and C\#, with emphasis on numerical methods and special functions.
+
+\section*{Academic Appointments}
+\entry{Department of Electronic Engineering, National Taipei University of Technology}{Aug. 2025--present}{Assistant Professor}{Taipei, Taiwan}
+
+\entry{Graduate Institute of Photonics and Optoelectronics, National Taiwan University}{Aug. 2024--Jul. 2025}{Postdoctoral Researcher}{Taipei, Taiwan}
+
+\entry{Ohmplus Technology}{Aug. 2022--Feb. 2024}{Co-founder and R\&D Engineer}{}
+
+\section*{Education}
+\entry{National Taiwan University}{2017--2022}{Ph.D., Communication Engineering}{Taipei, Taiwan}
+Dissertation area: Antenna array calibration algorithms.
+
+\entry{National Taiwan University}{2013--2017}{B.S., Electrical Engineering}{Taipei, Taiwan}
+
+\section*{Research Interests}
+\begin{itemize}
+  \item Computational electromagnetics: FDTD, PSTD, and MoM.
+  \item High-frequency asymptotic techniques: UTD and PO.
+  \item Antenna array calibration and optimization.
+  \item Antenna measurement and near-to-far-field transformation.
+  \item Light scattering and propagation in random media.
+\end{itemize}
+
+\section*{Honors and Awards}
+\begin{tabularx}{\textwidth}{@{}r X@{}}
+2023 & Chun-Hsiung Chen Scholarship for Electromagnetic Talent Cultivation, First Prize of Graduate Group.\\
+2022 & National Invention and Creation Award (NICA), Silver Medal Award.\\
+2017 & Taiwan Creative Electromagnetic Implementation Competition (T-CEIC), First Prize.\\
+2017 & The Phi Tau Phi Scholastic Honor Society of the Republic of China, Honorary Membership.\\
+\end{tabularx}
+
+\section*{Publications}
+
+\subsection*{Book}
+\begin{enumerate}[label={[B\arabic*]}]
+  \item \name. \textit{\href{https://press.ntu.edu.tw/tw/publish/show.php?act=book\&refer=ntup_book01502}{Lectures on Electromagnetic Theory}}. National Taiwan University Press, Jan. 2026. ISBN 978-626-7768-52-5.
+\end{enumerate}
+
+\subsection*{Journal Articles}
+\begin{enumerate}[label={[J\arabic*]}]
+  \item \name. ``\href{https://doi.org/10.1016/j.softx.2026.102586}{FishTank.jl: A model-driven approach to gamified scientific modeling and visualization in Julia}.'' \textit{SoftwareX}, vol. 34, p. 102586, Jun. 2026. \pubdoi{10.1016/j.softx.2026.102586}.
+
+  \item \name. ``\href{https://doi.org/10.1109/JPHOT.2026.3671959}{Angle-resolved structural coloration modeling in Morpho wing nanostructures with staggered 3D pseudospectral time-domain method}.'' \textit{IEEE Photonics Journal}, vol. 18, no. 2, pp. 1--9, Apr. 2026. \pubdoi{10.1109/JPHOT.2026.3671959}.
+
+  \item \name\ and Snow H. Tseng. ``\href{https://doi.org/10.1016/j.rio.2026.100990}{Exploring the possibility to focus light through 2-D scattering media with phase only}.'' \textit{Results in Optics}, vol. 23, p. 100990, Feb. 2026. \pubdoi{10.1016/j.rio.2026.100990}.
+
+  \item \name. ``\href{https://doi.org/10.13052/2026.ACES.J.410108}{Numerical analysis of large-scale phased array calibration, using a Kronecker product formulation}.'' \textit{Applied Computational Electromagnetics Society Journal (ACES)}, pp. 74--80, Jan. 2026. \pubdoi{10.13052/2026.ACES.J.410108}.
+
+  \item \name. ``\href{https://doi.org/10.21105/joss.08516}{SpecialFunctions: A C\# package of special functions for scientific computing with MATLAB-compatible API}.'' \textit{Journal of Open Source Software}, vol. 10, no. 113, p. 8516, Sep. 2025. \pubdoi{10.21105/joss.08516}.
+
+  \item \name\ and Snow H. Tseng. ``\href{https://doi.org/10.1364/OE.546322}{Near-to-far-field transformation scheme utilizing a modified sinc interpolation method for PSTD simulations}.'' \textit{Optics Express}, vol. 32, no. 26, pp. 47225--47235, Dec. 2024. \pubdoi{10.1364/OE.546322}.
+
+  \item \name. ``\href{https://doi.org/10.13052/2024.ACES.J.391201}{Circularly polarized plane wave source implementation in time-domain electromagnetic simulations}.'' \textit{Applied Computational Electromagnetics Society Journal (ACES)}, pp. 1035--1041, Dec. 2024. \pubdoi{10.13052/2024.ACES.J.391201}.
+
+  \item \name, Yueh-Sheng Hsu, and Snow H. Tseng. ``\href{https://doi.org/10.1109/LAWP.2018.2850775}{Extracting field information embedded within a coarse pseudospectral time-domain simulation}.'' \textit{IEEE Antennas and Wireless Propagation Letters}, vol. 17, no. 8, pp. 1488--1491, Aug. 2018. \pubdoi{10.1109/LAWP.2018.2850775}.
+
+  \item Hsi-Tseng Chou and \name. ``\href{https://doi.org/10.1109/TAP.2018.2841422}{Synthesis and characteristic evaluation of convex metallic reflectarray antennas to radiate relatively orthogonal multibeams}.'' \textit{IEEE Transactions on Antennas and Propagation}, vol. 66, no. 8, pp. 4008--4016, Aug. 2018. \pubdoi{10.1109/TAP.2018.2841422}.
+\end{enumerate}
+
+\subsection*{Conference Papers}
+\begin{enumerate}[label={[C\arabic*]}]
+  \item Pin-Chih Lin and \name. ``\href{https://aces-society.org/search.php?q=++EVM\&search=Search}{Joint Optimization of Radiation Pattern and EVM for Nonlinear mmWave Phased Arrays}.'' In \textit{2026 International Applied Computational Electromagnetics Society (ACES) Symposium}, Thessaloniki, Greece, May 2026.
+
+  \item Sheng-Chun Yao, \name, and Snow H. Tseng. ``\href{https://doi.org/10.1117/12.3039886}{Simulation of constant amplitude light refocusing through scattering media by optical phase conjugation}.'' In \textit{Biomedical Light Scattering XV}, vol. 13320, pp. 61--63, Mar. 2025. \pubdoi{10.1117/12.3039886}.
+
+  \item Bryan Chihyuan Chu, \name, and Zhao He Lin. ``\href{https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202302253484188306}{Active phased array antenna optimization and calibration for satellite applications}.'' In \textit{IEICE Technical Report (Web)}, vol. 122, no. 312 (SANE2022 62--87), pp. 50--52, Dec. 2022.
+
+  \item Hsi-Tseng Chou, \name, Teng Chang, and Yi-Sheng Chang. ``\href{https://doi.org/10.1109/RFIT52905.2021.9565252}{A design of perodic circuit analog absorber at X-band and its fabrication discrepancy analysis}.'' In \textit{2021 IEEE International Symposium on Radio-Frequency Integration Technology (RFIT)}, pp. 1--3, Aug. 2021. \pubdoi{10.1109/RFIT52905.2021.9565252}.
+
+  \item Hsi-Tseng Chou, \name, Kun-Ying Lin, and Siddhartha Panigrahi. ``\href{https://doi.org/10.1109/ICCEM47450.2020.9219428}{Effective modeling of frequency selective surfaces by equivalent dielectric substrates using genetic algorithm for electromagnetic scattering analysis}.'' In \textit{2020 IEEE International Conference on Computational Electromagnetics (ICCEM)}, pp. 103--104, Aug. 2020. \pubdoi{10.1109/ICCEM47450.2020.9219428}.
+
+  \item \name\ and Hsi-Tseng Chou. ``\href{https://www.ursi.org/proceedings/procGA20/papers/YSASummaryLiuWaldvogelJake.pdf}{Antenna radiation field pattern interpolation technique from sparse measurements according to discrete Fourier transform}.'' In \textit{2020 URSI GASS}, pp. 1--4, Aug. 2020.
+
+  \item Hsi-Tseng Chou, \name, and Wen-Jiao Liao. ``\href{https://doi.org/10.23919/EuCAP.2019.8739999}{Fast phased array antenna calibration incorporating with a far-field radiation measurement system}.'' In \textit{2019 13th European Conference on Antennas and Propagation (EuCAP)}, pp. 1--4, Mar. 2019. \pubdoi{10.23919/EuCAP.2019.8739999}.
+\end{enumerate}
+
+\end{document}
