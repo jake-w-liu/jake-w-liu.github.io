@@ -151,7 +151,7 @@
   --jp-mirror-editor-builtin-color: #1B813E;
   --jp-mirror-editor-tag-color: #1B813E;
   --jp-mirror-editor-attribute-color: #113285;
-  --jp-mirror-editor-header-color: blue;
+  --jp-mirror-editor-header-color: #005CAF;
   --jp-mirror-editor-quote-color: #1B813E;
   --jp-mirror-editor-link-color: #113285;
 
@@ -362,7 +362,7 @@ body[data-jp-theme-light="false"] {
 
   /* colors based on JetBrain's Darcula theme */
   --jp-scrollbar-background-color: #434343;
-  --jp-scrollbar-thumb-color: 88, 96, 97; /* need to specify thumb color as an RGB triplet */
+  --jp-scrollbar-thumb-color: 83, 89, 83; /* need to specify thumb color as an RGB triplet */
 
   --jp-scrollbar-endpad: 3px; /* the minimum gap between the thumb and the ends of a scrollbar */
 
