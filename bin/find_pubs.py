@@ -98,27 +98,34 @@ BOOK_FIELD_ORDER = [
 
 DROP_FIELDS = {"issn"}
 TRAILING_FIELDS = {"abbr", "doi", "url"}
-PRESERVE_TITLE_WORDS = {
-    "ACES",
-    "API",
-    "CPU",
-    "DFT",
-    "DOI",
-    "EVM",
-    "FDTD",
-    "FFT",
-    "GPU",
-    "GTD",
-    "ICCEM",
-    "IEEE",
-    "MATLAB",
-    "PEC",
-    "PSTD",
-    "RF",
-    "RFIT",
-    "SPIE",
-    "URSI",
-    "UTD",
+CANONICAL_TITLE_TERMS = {
+    term.lower(): term
+    for term in (
+        "ACES",
+        "API",
+        "CPU",
+        "DFT",
+        "DOI",
+        "EVM",
+        "FDTD",
+        "FFT",
+        "GPU",
+        "GTD",
+        "ICCEM",
+        "IEEE",
+        "Julia",
+        "Kouyoumjian",
+        "MATLAB",
+        "Pathak",
+        "PEC",
+        "PSTD",
+        "RF",
+        "RFIT",
+        "SPIE",
+        "URSI",
+        "UTD",
+        "UTDKernels.jl",
+    )
 }
 
 
@@ -334,16 +341,19 @@ def detect_abbr_from_type(entry_type):
 
 
 def title_word_needs_preserving(word):
-    """Return True for acronyms, code names, and BibTeX-sensitive terms."""
+    """Return True for code names and BibTeX-sensitive terms."""
     if not word:
         return False
     if re.search(r"[\d+#.]", word):
         return True
     if len(word) == 1 and word.isupper():
         return True
-    if word.upper() in PRESERVE_TITLE_WORDS:
-        return True
     return any(c.isupper() for c in word[1:]) and any(c.islower() for c in word)
+
+
+def canonical_title_term(token):
+    """Return local preferred casing for known title terms."""
+    return CANONICAL_TITLE_TERMS.get(token.lower())
 
 
 def capitalize_first_letter(word):
@@ -358,6 +368,9 @@ def capitalize_first_letter(word):
 
 def sentence_case_token(token, capitalize):
     """Sentence-case one token, preserving acronyms and mixed-case code names."""
+    canonical = canonical_title_term(token)
+    if canonical:
+        return canonical
     if re.search(r"[\d+#.]", token):
         return token
 
@@ -365,7 +378,10 @@ def sentence_case_token(token, capitalize):
     formatted = []
     for i, part in enumerate(parts):
         should_cap = capitalize and i == 0
-        if title_word_needs_preserving(part):
+        canonical = canonical_title_term(part)
+        if canonical:
+            formatted.append(canonical)
+        elif title_word_needs_preserving(part):
             formatted.append(part)
         elif should_cap:
             formatted.append(capitalize_first_letter(part))
