@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         y: 100,
         width: 20,
         height: 20,
-        color: '#333',
+        color: '#373C38',
         velocityY: 0,
         isJumping: false,
         draw() {
@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Score
-        ctx.fillStyle = '#333';
+        ctx.fillStyle = '#373C38';
         ctx.font = '16px Arial';
         ctx.fillText(`Score: ${score}`, 10, 20);
         ctx.fillText(`High Score: ${highScore}`, 10, 40);
 
 
         if (isGameOver) {
-            ctx.fillStyle = '#333';
+            ctx.fillStyle = '#373C38';
             ctx.font = '24px Arial';
             ctx.fillText('Game Over', canvas.width / 2 - 60, canvas.height / 2);
             ctx.font = '16px Arial';

@@ -98,6 +98,28 @@ BOOK_FIELD_ORDER = [
 
 DROP_FIELDS = {"issn"}
 TRAILING_FIELDS = {"abbr", "doi", "url"}
+PRESERVE_TITLE_WORDS = {
+    "ACES",
+    "API",
+    "CPU",
+    "DFT",
+    "DOI",
+    "EVM",
+    "FDTD",
+    "FFT",
+    "GPU",
+    "GTD",
+    "ICCEM",
+    "IEEE",
+    "MATLAB",
+    "PEC",
+    "PSTD",
+    "RF",
+    "RFIT",
+    "SPIE",
+    "URSI",
+    "UTD",
+}
 
 
 def get_orcid_id():
@@ -112,6 +134,37 @@ def get_orcid_id():
     return None
 
 
+def iter_bibtex_entries(content):
+    """Yield complete BibTeX entries from a bibliography file."""
+    i = 0
+    while i < len(content):
+        at = content.find("@", i)
+        if at == -1:
+            break
+
+        brace = content.find("{", at)
+        if brace == -1:
+            break
+
+        depth = 0
+        j = brace
+        while j < len(content):
+            if content[j] == "\\":
+                j += 2
+                continue
+            if content[j] == "{":
+                depth += 1
+            elif content[j] == "}":
+                depth -= 1
+                if depth == 0:
+                    yield content[at : j + 1]
+                    i = j + 1
+                    break
+            j += 1
+        else:
+            break
+
+
 def get_existing_entries():
     """Extract DOIs and titles already in papers.bib."""
     dois = set()
@@ -119,21 +172,24 @@ def get_existing_entries():
     keys = set()
     with open(BIB_FILE) as f:
         content = f.read()
-    # Extract citation keys
-    for m in re.finditer(r'@\w+\s*\{\s*([^,\s]+)', content):
-        keys.add(m.group(1).strip().lower())
-    # Match doi fields like: doi = {10.xxxx/yyyy}
-    for m in re.finditer(r'doi\s*=\s*\{([^}]+)\}', content, re.IGNORECASE):
-        dois.add(m.group(1).strip().lower())
-    # Match DOIs embedded in URLs
-    for m in re.finditer(r'https?://doi\.org/(10\.[^}\s,]+)', content):
-        dois.add(m.group(1).strip().lower())
-    # Extract titles for fallback matching
-    for m in re.finditer(r'title\s*=\s*\{([^}]+)\}', content, re.IGNORECASE):
-        # Normalize: lowercase, strip punctuation/whitespace
-        t = re.sub(r'[^a-z0-9\s]', '', m.group(1).strip().lower())
-        t = re.sub(r'\s+', ' ', t).strip()
-        titles.add(t)
+
+    for entry in iter_bibtex_entries(content):
+        parsed = parse_bibtex_entry(entry)
+        if not parsed:
+            continue
+
+        _, key, fields = parsed
+        keys.add(key.lower())
+
+        if fields.get("doi"):
+            dois.add(normalize_doi(fields["doi"]).lower())
+        if fields.get("url"):
+            m = re.search(r"https?://(?:dx\.)?doi\.org/(10\.[^}\s,]+)", fields["url"], re.IGNORECASE)
+            if m:
+                dois.add(normalize_doi(m.group(1)).lower())
+        if fields.get("title"):
+            titles.add(normalize_title(fields["title"]))
+
     return dois, titles, keys
 
 
@@ -285,7 +341,7 @@ def title_word_needs_preserving(word):
         return True
     if len(word) == 1 and word.isupper():
         return True
-    if len(word) > 1 and word.isupper():
+    if word.upper() in PRESERVE_TITLE_WORDS:
         return True
     return any(c.isupper() for c in word[1:]) and any(c.islower() for c in word)
 

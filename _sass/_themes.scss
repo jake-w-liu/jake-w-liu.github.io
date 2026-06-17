@@ -17,7 +17,7 @@
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-divider-color: rgba(8, 8, 8, 0.1);
   --global-card-bg-color: #{$white-color};
   --global-highlight-color: #{$red-color-dark};
   --global-back-to-top-bg-color: rgba(
@@ -30,18 +30,18 @@
   --global-newsletter-bg-color: #{$white-color};
   --global-newsletter-text-color: #{$black-color};
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-tip-block: #5DAC81;
+  --global-tip-block-bg: #FCFAF2;
+  --global-tip-block-text: #20604F;
+  --global-tip-block-title: #24936E;
+  --global-warning-block: #FFC408;
+  --global-warning-block-bg: #FCFAF2;
+  --global-warning-block-text: #6C6024;
+  --global-warning-block-title: #C18A26;
+  --global-danger-block: #E83015;
+  --global-danger-block-bg: #FEDFE1;
+  --global-danger-block-text: #43341B;
+  --global-danger-block-title: #E83015;
 
   #light-toggle-system {
     padding-left: 10px;
@@ -89,7 +89,7 @@ html[data-theme="dark"] {
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
+  --global-divider-color: #434343;
   --global-card-bg-color: #{$grey-900};
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
@@ -101,18 +101,18 @@ html[data-theme="dark"] {
   --global-newsletter-bg-color: #{$grey-color-light};
   --global-newsletter-text-color: #{$grey-color-dark};
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-tip-block: #5DAC81;
+  --global-tip-block-bg: #FCFAF2;
+  --global-tip-block-text: #20604F;
+  --global-tip-block-title: #24936E;
+  --global-warning-block: #FFC408;
+  --global-warning-block-bg: #FCFAF2;
+  --global-warning-block-text: #6C6024;
+  --global-warning-block-title: #C18A26;
+  --global-danger-block: #E83015;
+  --global-danger-block-bg: #FEDFE1;
+  --global-danger-block-text: #43341B;
+  --global-danger-block-title: #E83015;
 
   .only-light {
     display: none;

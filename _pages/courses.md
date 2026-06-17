@@ -14,7 +14,8 @@ horizontal: false
 {% if site.enable_course_categories and page.display_categories %}
   <!-- Display categorized courses -->
   {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
+  {% assign category_slug = category | slugify %}
+  <a id="{{ category_slug }}" href="#{{ category_slug }}">
     <h2 class="category">{{ category }}</h2>
   </a>
   {% assign categorized_courses = site.courses | where: "category", category %}

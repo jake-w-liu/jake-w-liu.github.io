@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-{% assign year = page.started | date: '%Y' %}
+{% assign book_year_source = page.started | default: page.date %}
+{% assign year = book_year_source | date: '%Y' %}
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
 
@@ -36,7 +37,7 @@ layout: default
           {% if page.started %}
             &nbsp;&middot;&nbsp;
           {% endif %}
-          <i class="fa-solid fa-stop fa-sm" style="color: #e56565 !important"></i> <em>{{ page.finished }}</em>
+          <i class="fa-solid fa-stop fa-sm" style="color: #D05A6E !important"></i> <em>{{ page.finished }}</em>
         {% endif %}
         {% if page.stars %}
           {% if page.started or page.finished %}
@@ -77,7 +78,7 @@ layout: default
       </p>
     {% endif %}
     <p class="post-tags">
-      <a href="{{ year | prepend: '/books/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}</a>
+      <a href="{{ '/books/#y' | append: year | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}</a>
       {% if tags != '' %}
         &nbsp;&middot;&nbsp;
         {% for tag in page.tags %}

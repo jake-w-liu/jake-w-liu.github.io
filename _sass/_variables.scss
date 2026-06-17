@@ -3,39 +3,37 @@
  * To adjust anything, simply edit the variables below and rebuild the theme.
  ******************************************************************************/
 
-@use "sass:color";
-
 // Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
-$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
-$green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
-$light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color: #f92080 !default;
-$pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+$red-color: #F75C2F !default;
+$red-color-dark: #AB3B3A !default;
+$orange-color: #E98B2A !default;
+$blue-color: #005CAF !default;
+$blue-color-dark: #113285 !default;
+$cyan-color: #33A6B8 !default;
+$light-cyan-color: #81C7D4 !default;
+$green-color: #1B813E !default;
+$green-color-lime: #BEC23F !default;
+$green-color-dark: #1B813E !default;
+$green-color-light: #FCFAF2 !default;
+$green-color-bright: #00AA90 !default;
+$purple-color: #C1328E !default;
+$light-purple-color: #B28FCE !default;
+$pink-color: #E03C8A !default;
+$pink-color-light: #FEDFE1 !default;
+$yellow-color: #FFC408 !default;
 
 $grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+$grey-color-light: #FCFAF2 !default;
+$grey-color-dark: #1C1C1C;
+$grey-900: #1C1C1C;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color: #FFFFFB !default;
+$black-color: #080808 !default;
 
 // Theme colors
 
 $code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-dark: #373C38 !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

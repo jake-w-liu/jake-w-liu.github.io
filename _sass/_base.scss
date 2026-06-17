@@ -451,8 +451,8 @@ ul.task-list input[type="checkbox"] {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(8, 8, 8);
+  background-color: rgba(8, 8, 8, 0.8);
 }
 
 .wechat-modal > img {
@@ -802,7 +802,7 @@ footer.sticky-bottom {
           }
 
           a {
-            color: white;
+            color: #FFFFFB;
 
             &:hover {
               text-decoration: none;
@@ -1269,7 +1269,7 @@ ninja-keys::part(ninja-input-wrapper) {
   max-width: 350px;
   min-width: 100px;
   box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  box-shadow: rgba(8, 8, 8, 0.05) 0px 1px 2px;
   border-radius: 6px;
   padding: 8px 12px;
 }
@@ -1289,7 +1289,7 @@ ninja-keys::part(ninja-input-wrapper) {
   align-items: center;
   flex-direction: row;
   padding: 9px 17px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  box-shadow: rgba(8, 8, 8, 0.05) 0px 1px 2px;
   border-radius: 6px;
   text-align: center;
   font-style: normal;
@@ -1310,7 +1310,7 @@ ninja-keys::part(ninja-input-wrapper) {
   align-items: center;
   flex-direction: row;
   padding: 9px 17px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  box-shadow: rgba(8, 8, 8, 0.05) 0px 1px 2px;
   border-radius: 6px;
   text-align: center;
   font-style: normal;
@@ -1362,7 +1362,7 @@ ninja-keys::part(ninja-input-wrapper) {
 // popover is used for annotation in bib.liquid
 .popover {
   // background-color: var(--global-bg-color);
-  background-color: #62c462;
+  background-color: #86C166;
   border-color: var(--global-divider-color);
 
   .popover-header {
@@ -1416,65 +1416,65 @@ figure.cover {
 
   figcaption.abandoned {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #ee5f5b;
+    background-color: #D75455;
   }
 
   figcaption.finished,
   figcaption.watched {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #62c462;
+    background-color: #86C166;
   }
 
   figcaption.interested {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #7691db;
+    background-color: #7B90D2;
   }
 
   figcaption.paused {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #bdac7e;
+    background-color: #B4A582;
   }
 
   figcaption.queued {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #9e76b5;
+    background-color: #986DB2;
   }
 
   figcaption.reading,
   figcaption.watching {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #f89406;
+    background-color: #FFB11B;
   }
 
   figcaption.reread,
   figcaption.rewatch {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #a6517d;
+    background-color: #A8497A;
   }
 
   figcaption.uncategorized {
     font-family: monospace;
-    color: #23212d;
+    color: #1C1C1C;
     text-transform: uppercase;
-    background-color: #b0abb3;
+    background-color: #BDC0BA;
   }
 
   /* mouse over link */
   a.cover-link:hover {
-    color: #23212d !important;
+    color: #1C1C1C !important;
   }
 }

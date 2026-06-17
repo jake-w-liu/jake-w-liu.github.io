@@ -12,22 +12,22 @@ nav_order: 4
 
 <script>
 const LANG_COLORS = {
-  "Julia": "#a270ba",
-  "JavaScript": "#f1e05a",
-  "TypeScript": "#3178c6",
-  "Python": "#3572A5",
-  "C#": "#178600",
-  "C++": "#f34b7d",
-  "C": "#555555",
-  "HTML": "#e34c26",
-  "CSS": "#563d7c",
-  "SCSS": "#c6538c",
-  "Shell": "#89e051",
-  "Rust": "#dea584",
-  "Go": "#00ADD8",
-  "MATLAB": "#e16737",
-  "TeX": "#3D6117",
-  "Jupyter Notebook": "#DA5B0B",
+  "Julia": "#986DB2",
+  "JavaScript": "#FBE251",
+  "TypeScript": "#3A8FB7",
+  "Python": "#1E88A8",
+  "C#": "#1B813E",
+  "C++": "#E03C8A",
+  "C": "#535953",
+  "HTML": "#F05E1C",
+  "CSS": "#66327C",
+  "SCSS": "#D05A6E",
+  "Shell": "#86C166",
+  "Rust": "#E1A679",
+  "Go": "#2EA9DF",
+  "MATLAB": "#F75C2F",
+  "TeX": "#42602D",
+  "Jupyter Notebook": "#F05E1C",
 };
 
 async function loadRepos() {
@@ -44,7 +44,7 @@ async function loadRepos() {
         .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.pushed_at) - new Date(a.pushed_at))
         .forEach(repo => {
           const langDot = repo.language
-            ? `<span class="lang-dot" style="background:${LANG_COLORS[repo.language] || '#888'}"></span> ${repo.language}`
+            ? `<span class="lang-dot" style="background:${LANG_COLORS[repo.language] || '#828282'}"></span> ${repo.language}`
             : "";
           const desc = repo.description || "";
           container.insertAdjacentHTML("beforeend", `
