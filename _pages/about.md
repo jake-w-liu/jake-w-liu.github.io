@@ -33,6 +33,6 @@ I spend most of my time convincing computers to solve Maxwell's equations — an
 - Antenna measurement theory and near-to-far-field transformation
 - Light scattering and propagation in random media
 
-When I'm not chasing electromagnetic waves, I write open-source scientific software in Julia and C#, focusing on numerical methods and special functions. I also wrote a [book on electromagnetic theory](https://press.ntu.edu.tw/tw/publish/show.php?act=book&refer=ntup_book01502) (NTU Press, 2026) — partly because I love the subject, and partly because my students needed something to read besides my handwriting.
+When I'm not chasing electromagnetic waves, I write open-source scientific software in Julia, focusing on numerical methods and special functions. I also wrote a [book on electromagnetic theory](https://press.ntu.edu.tw/tw/publish/show.php?act=book&refer=ntup_book01502) (NTU Press, 2026) — partly because I love the subject, and partly because my students needed something to read besides my handwriting.
 
 Feel free to reach out via email if you have questions, want to collaborate, or just want to argue about which numerical method is best.
