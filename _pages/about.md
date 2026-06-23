@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Assistant Professor, Department of Electronic Engineering, National Taipei University of Technology
+subtitle: 
 
 profile:
   align: right
