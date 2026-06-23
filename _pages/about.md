@@ -6,7 +6,7 @@ subtitle: Assistant Professor, Department of Electronic Engineering, National Ta
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: true # crops the image to make it circular
   width: 120 # in pixels
   more_info: 
