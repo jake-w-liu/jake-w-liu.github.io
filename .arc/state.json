@@ -1,0 +1,13 @@
+{
+  "consecutive_failures": 0,
+  "events_recorded": 2,
+  "last_event": "Stop",
+  "last_event_at_epoch": 1782787767.145118,
+  "last_event_at_iso": "2026-06-30T02:49:27Z",
+  "last_policy": "P0",
+  "last_status": "ok",
+  "policies_used": {
+    "P0": 1
+  },
+  "version": 1
+}
