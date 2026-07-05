@@ -8,17 +8,17 @@
       "reason": "no cache"
     },
     "local": {
-      "changed_files": 14,
+      "changed_files": 3,
       "consecutive_failures": 0,
       "diff_stats": {
-        "files": 12,
-        "lines_added": 82,
-        "lines_removed": 17
+        "files": 3,
+        "lines_added": 75,
+        "lines_removed": 7
       },
       "failed_canaries": 0,
       "git_status_counts": {
-        "tracked": 12,
-        "untracked": 2
+        "tracked": 3,
+        "untracked": 0
       },
       "project_markers": {
         "default_checks": {
@@ -38,34 +38,34 @@
         "python": true
       },
       "recent_failed_events": 0,
-      "recent_telemetry_events": 43,
+      "recent_telemetry_events": 55,
       "repeated_failure_signatures": 0,
       "state": {
         "consecutive_failures": 0,
-        "events_recorded": 40,
-        "last_event": "PostToolUse",
-        "last_event_at_epoch": 1783260057.319396,
-        "last_event_at_iso": "2026-07-05T14:00:57Z",
+        "events_recorded": 49,
+        "last_event": "Stop",
+        "last_event_at_epoch": 1783065132.333872,
+        "last_event_at_iso": "2026-07-03T07:52:12Z",
         "last_policy": "P0",
         "last_status": "ok",
         "policies_used": {
-          "P0": 1,
-          "P1": 1
+          "P0": 2
         },
         "version": 1
       }
     },
     "task": {
-      "broad_change_terms": [
-        "all"
-      ],
+      "broad_change_terms": [],
       "code_change_intent": true,
       "code_change_terms": [
-        "add"
+        "debug"
       ],
       "destructive_terms": [],
       "documentation_only": false,
-      "failure_terms": [],
+      "failure_terms": [
+        "debug",
+        "bug"
+      ],
       "high_impact_terms": [],
       "low_risk_terms": [],
       "read_only_terms": [],
@@ -80,10 +80,10 @@
   "reasoning_effort": "high",
   "risk_components": {
     "external_model_risk": 0.2,
-    "local_session_risk": 0.25,
-    "task_intrinsic_risk": 0.2
+    "local_session_risk": 0.1,
+    "task_intrinsic_risk": 0.06
   },
-  "risk_total": 0.223,
+  "risk_total": 0.113,
   "sandbox_mode": "workspace-write",
   "workflow": [
     "Create a concise plan before editing.",

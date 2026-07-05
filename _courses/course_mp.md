@@ -16,6 +16,17 @@ This is a one-semester graduate course on mathematical physics, centered on spec
 
 The primary textbook is **Kyle A. Novak with Laura J. Fox, [_Special Functions of Mathematical Physics: A Tourist's Guidebook_](https://www.equalsharepress.com/)**. A free PDF is available from Equal Share Press.
 
+The course slides are divided into eight chapters:
+
+* Chapter 1: The Guitar and the Drum ([Slides](/assets/pdf/sfmp_ch1.pdf))
+* Chapter 2: Complex Analysis ([Slides](/assets/pdf/sfmp_ch2.pdf))
+* Chapter 3: Gamma, Beta, Zeta ([Slides](/assets/pdf/sfmp_ch3.pdf))
+* Chapter 4: Method of Frobenius ([Slides](/assets/pdf/sfmp_ch4.pdf))
+* Chapter 5: Sturm-Liouville Theory ([Slides](/assets/pdf/sfmp_ch5.pdf))
+* Chapter 6: Bessel Functions ([Slides](/assets/pdf/sfmp_ch6.pdf))
+* Chapter 7: Orthogonal Polynomials ([Slides](/assets/pdf/sfmp_ch7.pdf))
+* Chapter 8: Self Test ([Slides](/assets/pdf/sfmp_ch8.pdf))
+
 ### References
 
 The following references are recommended:
