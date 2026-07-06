@@ -1,9 +1,9 @@
 {
   "consecutive_failures": 0,
-  "events_recorded": 49,
-  "last_event": "PostToolUse",
-  "last_event_at_epoch": 1783260107.871792,
-  "last_event_at_iso": "2026-07-05T14:01:47Z",
+  "events_recorded": 51,
+  "last_event": "Stop",
+  "last_event_at_epoch": 1783260160.982931,
+  "last_event_at_iso": "2026-07-05T14:02:40Z",
   "last_policy": "P1",
   "last_status": "ok",
   "policies_used": {
