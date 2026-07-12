@@ -21,7 +21,7 @@ The course slides are divided into five units:
 * Chapter 3: Electromagnetic Radiation ([Slides](/assets/pdf/emt_ch03.pdf))
 * Chapter 4: Electromagnetic Scattering ([Slides](/assets/pdf/emt_ch04.pdf))
 * Chapter 5: Special Relativity and Relativistic Electrodynamics ([Slides](/assets/pdf/emt_ch05.pdf))
-
+* Appendices: [A](/assets/pdf/emt_ap_a.pdf), [B](/assets/pdf/emt_ap_b.pdf), [C](/assets/pdf/emt_ap_c.pdf)
 
 ### References
 
