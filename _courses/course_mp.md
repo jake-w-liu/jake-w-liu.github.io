@@ -14,7 +14,7 @@ This is a one-semester graduate course on mathematical physics, centered on spec
 
 ### Course Material
 
-The primary textbook is **Kyle A. Novak with Laura J. Fox, [_Special Functions of Mathematical Physics: A Tourist's Guidebook_](https://www.equalsharepress.com/)**. A free PDF is available from Equal Share Press.
+The primary textbook is **Kyle A. Novak with Laura J. Fox, [_Special Functions of Mathematical Physics: A Tourist's Guidebook_](https://www.equalsharepress.com/)**. A free PDF is available from Equal Share Press. The slides are selections compiled from the book with typos fixed. 
 
 The course slides are divided into eight chapters:
 
