@@ -1,5 +1,15 @@
 # frozen_string_literal: true
 
+require "set"
+
+# Snap colors in site output to the nearest Nippon Colors (和色) palette entry.
+# Applies to:
+#   - rendered pages/documents (HTML)
+#   - Jupyter notebook HTML (via converter wrapper)
+#   - static text assets written to _site (css/js/svg/html/xml/json)
+#
+# Does not rewrite binary assets, or colors loaded from third-party CDNs at runtime.
+
 module NipponColorNormalizer
   PALETTE = %w[
     #DC9FB4 #E16B8C #8E354A #F8C3CD #F4A7B9 #64363C #F596AA #B5495B #E87A90 #D05A6E
@@ -30,6 +40,8 @@ module NipponColorNormalizer
   ].freeze
 
   PALETTE_RGB = PALETTE.map { |hex| hex.delete_prefix("#").scan(/../).map { |component| component.to_i(16) } }.freeze
+  PALETTE_SET = PALETTE.map(&:upcase).to_set.freeze
+
   NAMED_COLORS = {
     "white" => [255, 255, 255],
     "black" => [0, 0, 0],
@@ -47,6 +59,7 @@ module NipponColorNormalizer
     "brown" => [165, 42, 42],
   }.freeze
 
+  # Skip pure palette hits quickly: only rewrite non-palette hex, rgb/hsl, named colors.
   HEX_PATTERN = /(?<![&#])#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})\b/
   COMMA_RGB_PATTERN = /rgba?\(\s*([0-9.]+%?)\s*,\s*([0-9.]+%?)\s*,\s*([0-9.]+%?)(?:\s*,\s*([0-9.]+%?))?\s*\)/i
   SPACE_RGB_PATTERN = /rgba?\(\s*([0-9.]+%?)\s+([0-9.]+%?)\s+([0-9.]+%?)(?:\s*\/\s*([0-9.]+%?))?\s*\)/i
@@ -56,16 +69,33 @@ module NipponColorNormalizer
       (?:
         [:(,]|
         \b(?:color|background|background-color|border-color|border-top-color|border-right-color|border-bottom-color|
-        border-left-color|outline-color|fill|stroke|caret-color|column-rule-color|text-decoration-color)\s*:\s*
+        border-left-color|outline-color|fill|stroke|caret-color|column-rule-color|text-decoration-color|stop-color|
+        flood-color|lighting-color|accent-color)\s*:\s*
       )\s*
     )
     (?<name>white|black|red|blue|green|gray|grey|yellow|orange|purple|cyan|magenta|pink|brown)
     (?<suffix>\s*(?:[;),!]|$))
   /ix
 
+  TEXT_EXTENSIONS = %w[
+    .css .js .html .htm .svg .xml .json .txt .map .liquid
+  ].freeze
+
+  # Paths under destination we never rewrite (binary-ish or non-style content).
+  SKIP_PATH_PARTS = %w[
+    /assets/webfonts/
+    /assets/fonts/
+    /assets/pdf/
+    /assets/img/
+    /assets/bibliography/
+  ].freeze
+
   module_function
 
   def normalize(content)
+    return content if content.nil? || content.empty?
+    return content unless content_likely_has_colors?(content)
+
     content
       .gsub(HEX_PATTERN) { |value| normalize_hex(value) }
       .gsub(COMMA_RGB_PATTERN) { normalize_rgb(Regexp.last_match, :comma) }
@@ -75,6 +105,10 @@ module NipponColorNormalizer
         match = Regexp.last_match
         "#{match[:prefix]}#{nearest_hex(NAMED_COLORS.fetch(match[:name].downcase))}#{match[:suffix]}"
       end
+  end
+
+  def content_likely_has_colors?(content)
+    content.match?(/#(?:[0-9a-fA-F]{3,8})\b|rgba?\(|hsla?\(|\b(?:color|background|fill|stroke)\s*:/i)
   end
 
   def normalize_hex(value)
@@ -90,12 +124,18 @@ module NipponColorNormalizer
     alpha =
       case hex.length
       when 4
-        hex[3] * 2
+        (hex[3] * 2).upcase
       when 8
-        hex[6, 2]
+        hex[6, 2].upcase
       end
 
-    "#{nearest_hex(rgb)}#{alpha&.upcase}"
+    # Keep exact palette colors (case-normalized) to avoid churn.
+    full = format("#%02X%02X%02X", *rgb)
+    if alpha.nil? && PALETTE_SET.include?(full)
+      return full
+    end
+
+    "#{nearest_hex(rgb)}#{alpha}"
   end
 
   def normalize_rgb(match, style)
@@ -154,17 +194,68 @@ module NipponColorNormalizer
     end
   end
 
-  def hex_to_rgb(hex)
-    hex.delete_prefix("#").scan(/../).map { |component| component.to_i(16) }
+  def process_file!(path)
+    return false unless File.file?(path)
+
+    ext = File.extname(path).downcase
+    return false unless TEXT_EXTENSIONS.include?(ext)
+
+    relative = path.tr("\\", "/")
+    return false if SKIP_PATH_PARTS.any? { |part| relative.include?(part) }
+
+    # Skip huge search indexes / source maps with no real styling value beyond colors in strings.
+    basename = File.basename(path)
+    return false if basename.end_with?(".min.js.map")
+
+    original = File.binread(path)
+    # Only touch UTF-8-ish text files.
+    content =
+      begin
+        original.force_encoding("UTF-8")
+        original.encode("UTF-8")
+      rescue EncodingError
+        return false
+      end
+
+    normalized = normalize(content)
+    return false if normalized == content
+
+    File.binwrite(path, normalized)
+    true
+  end
+
+  def process_destination!(dest)
+    changed = 0
+    Dir.glob(File.join(dest, "**", "*"), File::FNM_DOTMATCH).each do |path|
+      next unless File.file?(path)
+      changed += 1 if process_file!(path)
+    end
+    changed
   end
 end
 
-if defined?(JekyllJupyterNotebook::Converter)
-  class JekyllJupyterNotebook::Converter
-    alias_method :convert_without_nippon_colors, :convert
+if defined?(Jekyll)
+  # Jupyter notebooks: remap colors in converted HTML.
+  if defined?(JekyllJupyterNotebook::Converter)
+    class JekyllJupyterNotebook::Converter
+      alias_method :convert_without_nippon_colors, :convert unless method_defined?(:convert_without_nippon_colors)
 
-    def convert(content)
-      NipponColorNormalizer.normalize(convert_without_nippon_colors(content))
+      def convert(content)
+        NipponColorNormalizer.normalize(convert_without_nippon_colors(content))
+      end
     end
+  end
+
+  # Rendered HTML/markdown pages and collection documents.
+  Jekyll::Hooks.register %i[pages documents], :post_render do |doc|
+    next if doc.output.nil? || doc.output.empty?
+
+    doc.output = NipponColorNormalizer.normalize(doc.output)
+  end
+
+  # Static assets and anything written as-is into _site.
+  Jekyll::Hooks.register :site, :post_write do |site|
+    changed = NipponColorNormalizer.process_destination!(site.dest)
+    Jekyll.logger.info "Nippon colors:", "normalized #{changed} file(s) under #{site.dest}"
   end
 end
