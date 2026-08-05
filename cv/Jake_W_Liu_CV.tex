@@ -15,6 +15,8 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.25em}
+% Long titles/DOIs: allow extra stretch so lines reflow instead of overfull boxes
+\emergencystretch=3em
 \setlist[itemize]{leftmargin=1.15em,itemsep=0.18em,topsep=0.2em}
 \setlist[enumerate]{leftmargin=1.8em,itemsep=0.45em,topsep=0.25em}
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\titlerule]
@@ -28,7 +30,16 @@
     #3 & #4 \\
   \end{tabularx}
 }
-\newcommand{\pubdoi}[1]{\href{https://doi.org/#1}{doi:#1}}
+% Prefer wrapping before the whole DOI; allow a break after '/' only if still too long
+\newcommand{\doiPath}[1]{\texorpdfstring{\expandafter\doiPathBreak#1/\relax}{#1}}
+\def\doiPathBreak#1/#2\relax{%
+  \ifx\relax#2\relax
+    #1%
+  \else
+    #1/\penalty\exhyphenpenalty\doiPathBreak#2\relax
+  \fi
+}
+\newcommand{\pubdoi}[1]{\unskip\nobreak\ \linebreak[1]\href{https://doi.org/#1}{doi:\doiPath{#1}}}
 \newcommand{\name}{\textbf{Jake W. Liu}}
 
 \begin{document}
@@ -41,7 +52,7 @@ Assistant Professor, Department of Electronic Engineering, National Taipei Unive
 \href{https://jake-w-liu.github.io}{jake-w-liu.github.io} \quad
 \href{https://github.com/jake-w-liu}{GitHub: jake-w-liu}\\
 \href{https://orcid.org/0000-0001-5458-7917}{ORCID: 0000-0001-5458-7917}}\\
-Last updated: August 4, 2026
+Last updated: August 5, 2026
 \end{center}
 
 \section*{Profile}
@@ -86,11 +97,11 @@ Dissertation area: Antenna array calibration algorithms.
 
 \subsection*{Journal Articles}
 \begin{enumerate}[label={[J\arabic*]}]
+  \item \name. ``\href{https://doi.org/10.1016/j.cpc.2026.110313}{A differentiable EFIE--MoM framework for surface-impedance inverse design of reactive metasurfaces}.'' \textit{Computer Physics Communications}, vol. 328, p. 110313, Nov. 2026. \pubdoi{10.1016/j.cpc.2026.110313}.
+
   \item \name. ``\href{https://doi.org/10.1016/j.softx.2026.102815}{UTDKernels.jl: A branch-safe and differentiable Julia library for Kouyoumjian--Pathak wedge diffraction kernels}.'' \textit{SoftwareX}, vol. 35, p. 102815, Sep. 2026. \pubdoi{10.1016/j.softx.2026.102815}.
 
-  \item J. W. Liu. ``\href{https://doi.org/10.13164/re.2026.0365}{3D radiation pattern reconstruction from reduced far-field sampling via iterative spectral interpolation}.'' \textit{Radioengineering}, vol. 35, no. 3, pp. 365--374, Sep. 2026. \pubdoi{10.13164/re.2026.0365}.
-
-  \item \name. ``\href{https://doi.org/10.1016/j.cpc.2026.110313}{A differentiable efie--MoM framework for surface-impedance inverse design of reactive metasurfaces}.'' \textit{Computer Physics Communications}, p. 110313, Jul. 2026. \pubdoi{10.1016/j.cpc.2026.110313}.
+  \item \name. ``\href{https://doi.org/10.13164/re.2026.0365}{3D radiation pattern reconstruction from reduced far-field sampling via iterative spectral interpolation}.'' \textit{Radioengineering}, vol. 35, no. 3, pp. 365--374, Sep. 2026. \pubdoi{10.13164/re.2026.0365}.
 
   \item \name. ``\href{https://doi.org/10.1016/j.softx.2026.102586}{FishTank.jl: A model-driven approach to gamified scientific modeling and visualization in Julia}.'' \textit{SoftwareX}, vol. 34, p. 102586, Jun. 2026. \pubdoi{10.1016/j.softx.2026.102586}.
 
