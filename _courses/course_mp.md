@@ -10,22 +10,19 @@ related_publications: false
 
 ### Course Description
 
-This is a one-semester graduate course on mathematical physics, centered on special functions and the differential equations that produce them. Following Novak and Fox's *Special Functions of Mathematical Physics: A Tourist's Guidebook*, the course covers complex analysis, Gamma/Beta/Zeta functions, Frobenius series, Sturm-Liouville theory, Bessel functions, Hankel transforms, spherical harmonics, and classical orthogonal polynomials.
+This is a one-semester graduate course on mathematical physics, centered on special functions and the differential equations that produce them. The course covers complex analysis, Gamma/Beta/Zeta functions, Frobenius series, Sturm-Liouville theory, Bessel functions, Hankel functions and Fourier-Bessel series, classical orthogonal polynomials and spherical harmonics, and calculus of variations.
 
 ### Course Material
 
-The primary textbook is **Kyle A. Novak with Laura J. Fox, [_Special Functions of Mathematical Physics: A Tourist's Guidebook_](https://www.equalsharepress.com/)**. A free PDF is available from Equal Share Press. The slides are selections compiled from the book with typos fixed. 
+The course slides are self-contained lecture notes, divided into seven chapters:
 
-The course slides are divided into eight chapters:
-
-* Chapter 1: The Guitar and the Drum ([Slides](/assets/pdf/sfmp_ch1.pdf))
-* Chapter 2: Complex Analysis ([Slides](/assets/pdf/sfmp_ch2.pdf))
-* Chapter 3: Gamma, Beta, Zeta ([Slides](/assets/pdf/sfmp_ch3.pdf))
-* Chapter 4: Method of Frobenius ([Slides](/assets/pdf/sfmp_ch4.pdf))
-* Chapter 5: Sturm-Liouville Theory ([Slides](/assets/pdf/sfmp_ch5.pdf))
-* Chapter 6: Bessel Functions ([Slides](/assets/pdf/sfmp_ch6.pdf))
-* Chapter 7: Orthogonal Polynomials ([Slides](/assets/pdf/sfmp_ch7.pdf))
-* Chapter 8: Self Test ([Slides](/assets/pdf/sfmp_ch8.pdf))
+* Chapter 1: Complex Analysis ([Slides](/assets/pdf/mp_ch1.pdf))
+* Chapter 2: Gamma, Beta, Zeta ([Slides](/assets/pdf/mp_ch2.pdf))
+* Chapter 3: Method of Frobenius ([Slides](/assets/pdf/mp_ch3.pdf))
+* Chapter 4: Sturm-Liouville Theory ([Slides](/assets/pdf/mp_ch4.pdf))
+* Chapter 5: Bessel Functions ([Slides](/assets/pdf/mp_ch5.pdf))
+* Chapter 6: Orthogonal Polynomials ([Slides](/assets/pdf/mp_ch6.pdf))
+* Chapter 7: Calculus of Variations ([Slides](/assets/pdf/mp_ch7.pdf))
 
 ### References
 
