@@ -1,0 +1,159 @@
+/*******************************************************************************
+ * Themes
+ ******************************************************************************/
+
+@use "sass:color";
+
+:root {
+  color-scheme: light;
+  --global-bg-color: #{$white-color};
+  --global-code-bg-color: #{$code-bg-color-light};
+  --global-text-color: #{$black-color};
+  --global-text-color-light: #{$grey-color};
+  --global-theme-color: #{$purple-color};
+  --global-hover-color: #{$purple-color};
+  --global-hover-text-color: #{$white-color};
+  --global-footer-bg-color: #{$grey-color-dark};
+  --global-footer-text-color: #{$grey-color-light};
+  --global-footer-link-color: #{$white-color};
+  --global-divider-color: rgba(8, 8, 8, 0.1);
+  --global-card-bg-color: #{$white-color};
+  --global-highlight-color: #{$red-color-dark};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel($black-color, "red", $space: rgb)},
+    #{color.channel($black-color, "green", $space: rgb)},
+    #{color.channel($black-color, "blue", $space: rgb)},
+    0.4
+  );
+  --global-back-to-top-text-color: #{$white-color};
+  --global-newsletter-bg-color: #{$white-color};
+  --global-newsletter-text-color: #{$black-color};
+
+  --global-tip-block: #5DAC81;
+  --global-tip-block-bg: #FCFAF2;
+  --global-tip-block-text: #20604F;
+  --global-tip-block-title: #24936E;
+  --global-warning-block: #FFC408;
+  --global-warning-block-bg: #FCFAF2;
+  --global-warning-block-text: #6C6024;
+  --global-warning-block-title: #C18A26;
+  --global-danger-block: #E83015;
+  --global-danger-block-bg: #FEDFE1;
+  --global-danger-block-text: #43341B;
+  --global-danger-block-title: #E83015;
+
+  #light-toggle-system {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: $back-to-top-bottom;
+    right: $back-to-top-right;
+    height: $back-to-top-height;
+    width: $back-to-top-width;
+    z-index: $back-to-top-z-index;
+  }
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --global-bg-color: #{$grey-color-dark};
+  --global-code-bg-color: #{$code-bg-color-dark};
+  --global-text-color: #{$grey-color-light};
+  --global-text-color-light: #{$grey-color};
+  --global-theme-color: #{$cyan-color};
+  --global-hover-color: #{$cyan-color};
+  --global-hover-text-color: #{$white-color};
+  --global-footer-bg-color: #{$grey-color-light};
+  --global-footer-text-color: #{$grey-color-dark};
+  --global-footer-link-color: #{$black-color};
+  --global-divider-color: #434343;
+  --global-card-bg-color: #{$grey-900};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel($white-color, "red", $space: rgb)},
+    #{color.channel($white-color, "green", $space: rgb)},
+    #{color.channel($white-color, "blue", $space: rgb)},
+    0.5
+  );
+  --global-back-to-top-text-color: #{$black-color};
+  --global-newsletter-bg-color: #{$grey-color-light};
+  --global-newsletter-text-color: #{$grey-color-dark};
+
+  --global-tip-block: #5DAC81;
+  --global-tip-block-bg: #FCFAF2;
+  --global-tip-block-text: #20604F;
+  --global-tip-block-title: #24936E;
+  --global-warning-block: #FFC408;
+  --global-warning-block-bg: #FCFAF2;
+  --global-warning-block-text: #6C6024;
+  --global-warning-block-title: #C18A26;
+  --global-danger-block: #E83015;
+  --global-danger-block-bg: #FEDFE1;
+  --global-danger-block-text: #43341B;
+  --global-danger-block-title: #E83015;
+
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
+}
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
+  }
+}
