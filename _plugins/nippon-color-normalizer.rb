@@ -188,10 +188,15 @@ module NipponColorNormalizer
     format("#%02X%02X%02X", *nearest)
   end
 
-  def nearest_rgb(rgb)
-    PALETTE_RGB.min_by do |candidate|
+  # Memoized: output files repeat the same few colors, so cache the nearest match per RGB.
+  NEAREST_CACHE = Hash.new do |cache, rgb|
+    cache[rgb] = PALETTE_RGB.min_by do |candidate|
       rgb.zip(candidate).sum { |source, target| (source - target)**2 }
     end
+  end
+
+  def nearest_rgb(rgb)
+    NEAREST_CACHE[rgb]
   end
 
   def process_file!(path)

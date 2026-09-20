@@ -160,7 +160,9 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  # CSS files are excluded: main.css is already Sass-compressed and others are vendor .min files.
+  # CSSminify2 is O(n^2) and took ~9 minutes on main.css while saving ~57 bytes.
+  exclude: ["robots.txt", "assets/js/search/*.js", "assets/css/*.css"]
 
 # -----------------------------------------------------------------------------
 # Terser
